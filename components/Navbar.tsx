@@ -11,9 +11,6 @@ export default function Navbar() {
       font-weight: 600;
       color: #1a254b;
       cursor: pointer;
-      :hover {
-        color: #b4b4b4;
-      }
     }
     ul {
       padding: 0;
@@ -23,7 +20,8 @@ export default function Navbar() {
         margin-right: 1.5rem;
         cursor: pointer;
         :hover {
-          font-weight: 500;
+          color: transparent;
+          text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
       }
     }
