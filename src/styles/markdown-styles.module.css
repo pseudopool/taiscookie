@@ -1,0 +1,18 @@
+.markdown {
+  margin: 1rem;
+  line-height: 1.5rem;
+}
+
+.markdown h1 {
+  font-weight: 400;
+}
+
+.markdown h2 {
+  font-weight: 300;
+  font-size: 1.3rem;
+}
+
+.markdown h3,
+.markdown p {
+  font-weight: 200;
+}

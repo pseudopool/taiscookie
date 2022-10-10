@@ -9,6 +9,8 @@ const Home: NextPage = () => {
     display: grid;
     grid-template-columns: 30% 30% 30%;
     grid-gap: 1.5rem;
+    height: 50vh;
+    place-content: center;
     span {
       font-weight: 500;
       background-color: white;
@@ -20,8 +22,9 @@ const Home: NextPage = () => {
     p {
       font-size: 1rem;
       line-height: 1.5rem;
-      strong {
+      em {
         color: #1a254b;
+        font-style: normal;
         font-weight: 600;
       }
     }
@@ -36,13 +39,12 @@ const Home: NextPage = () => {
       <p>
         <span>하나</span>
         1994년 10월 24일 출생. 동국대학교에서 광고홍보학과 신문방송학을
-        공부했다. 졸업 후 <strong>기자, 에디터, 카피라이터</strong>로 일하다가
-        2022년 <strong>프론트엔드 개발자</strong>가 된다.
+        공부했다. 졸업 후 <em>기자, 에디터, 카피라이터</em>로 일하다가 2022년{" "}
+        <em>프론트엔드 개발자</em>가 된다.
       </p>
       <p>
         <span>둘</span>
-        최근 관심사는{" "}
-        <strong>테크노 음악, 현대 시학, 자바스크립트 생태계</strong>
+        최근 관심사는 <em>테크노 음악, 현대 시학, 자바스크립트 생태계</em>
         다.
       </p>
       <p>

@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
-import { projects } from "../public/portfolioDB/projects";
+import { projects } from "../../public/projects/projects";
 import Link from "next/link";
 
 export default function Portfolio() {
@@ -30,13 +30,13 @@ export default function Portfolio() {
       padding-bottom: 1rem;
       margin-bottom: 0.5rem;
     }
-    h3 {
+    h2 {
       font-size: 1rem;
       font-weight: 300;
       line-height: 1.3rem;
     }
     li {
-      list-style: disc;
+      list-style: none;
     }
     .icon {
       cursor: pointer;
@@ -68,7 +68,7 @@ export default function Portfolio() {
             />
             <h1>{project.title}</h1>
             <span>{project.date}</span>
-            <h3>{project.description}</h3>
+            <h2>{project.description}</h2>
             <aside>
               {project.skills.map((skill) => {
                 return <li key={skill}>{skill}</li>;
