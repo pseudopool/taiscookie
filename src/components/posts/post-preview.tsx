@@ -23,6 +23,9 @@ const preview = css`
   p {
     margin: 0.5rem 0 0 0;
     color: #00000070;
+    font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5rem;
   }
 `;
 

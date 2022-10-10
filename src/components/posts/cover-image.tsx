@@ -18,6 +18,7 @@ const CoverImage = ({ title, src, slug }: Props) => {
       css={css`
         border-radius: 1rem;
         object-fit: cover;
+        margin-left: 1rem;
       `}
     />
   );

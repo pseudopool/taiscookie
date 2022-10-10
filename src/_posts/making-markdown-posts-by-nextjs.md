@@ -1,10 +1,10 @@
 ---
-title: "Next.js로 마크다운 포스트가 있는 블로그 만들기"
-excerpt: "fs를 반영한 정적 페이지 만들기 A to Z"
-coverImage: "/assets/blog/test-file/cover.png"
+title: "Next.js로 만드는 블로그 A to Z"
+excerpt: "fs 파일 가져오기부터 마크다운 파싱까지"
+coverImage: "/assets/posts/making-markdown-posts-by-nextjs/cover.png"
 date: "2022-10-10T05:35:07.322Z"
 ogImage:
-  url: "/assets/blog/test-file/cover.png"
+  url: "/assets/blog/making-markdown-posts-by-nextjs/cover.png"
 ---
 
 # 🛠 Next.js로 블로그 만들기
