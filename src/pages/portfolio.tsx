@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
-
 import { projects } from "../../public/assets/projects/projects";
 import Link from "next/link";
 
@@ -35,6 +34,12 @@ export default function Portfolio() {
       font-weight: 300;
       line-height: 1.3rem;
     }
+    a {
+      color: #1700c5;
+    }
+    aside {
+      margin-top: 1rem;
+    }
     li {
       list-style: none;
     }
@@ -50,36 +55,44 @@ export default function Portfolio() {
       article {
         display: flex;
         flex-direction: column;
-        align-items: center;
+      }
+      .thumbnail {
+        object-fit: cover;
       }
     }
   `;
+
   return (
     <section css={portfolio}>
-      {projects.map((project) => {
-        return (
-          <article key={project.id}>
-            <Image
-              alt={project.title}
-              src={project.imgUrl}
-              width="300px"
-              height="300px"
-              className="thumbnail"
-            />
-            <h1>{project.title}</h1>
-            <span>{project.date}</span>
-            <h2>{project.description}</h2>
-            <aside>
-              {project.skills.map((skill) => {
-                return <li key={skill}>{skill}</li>;
-              })}
-              <Link href={project.github}>
-                <Icon icon="akar-icons:github-fill" className="icon" />
+      {projects
+        .sort((pr1, pr2) => (pr1.id > pr2.id ? -1 : 1))
+        .map((project) => {
+          return (
+            <article key={project.id}>
+              <Image
+                alt={project.title}
+                src={project.imgUrl}
+                width="300px"
+                height="300px"
+                className="thumbnail"
+              />
+              <h1>{project.title}</h1>
+              <span>{project.date}</span>
+              <h2>{project.description}</h2>
+              <Link href={project.blog}>
+                <a>이런 어려움을 겪고, 해결했습니다</a>
               </Link>
-            </aside>
-          </article>
-        );
-      })}
+              <aside>
+                {project.skills.map((skill) => {
+                  return <li key={skill}>{skill}</li>;
+                })}
+                <Link href={project.github}>
+                  <Icon icon="akar-icons:github-fill" className="icon" />
+                </Link>
+              </aside>
+            </article>
+          );
+        })}
     </section>
   );
 }
