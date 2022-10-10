@@ -2,7 +2,7 @@ import { css } from "@emotion/react";
 import Image from "next/image";
 import { Icon } from "@iconify/react";
 
-import { projects } from "../../public/projects/projects";
+import { projects } from "../../public/assets/projects/projects";
 import Link from "next/link";
 
 export default function Portfolio() {

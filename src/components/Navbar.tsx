@@ -25,6 +25,12 @@ export default function Navbar() {
         }
       }
     }
+    @media screen and (max-width: 480px) {
+      font-size: 4vw;
+      .home {
+        display: none;
+      }
+    }
   `;
   return (
     <nav css={navbar}>
@@ -33,7 +39,7 @@ export default function Navbar() {
       </Link>
       <ul>
         <Link href="/">
-          <li>홈</li>
+          <li className="home">홈</li>
         </Link>
         <Link href="/portfolio">
           <li>포트폴리오</li>

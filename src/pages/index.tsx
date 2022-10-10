@@ -11,6 +11,7 @@ const Home: NextPage = () => {
     grid-gap: 1.5rem;
     height: 50vh;
     place-content: center;
+
     span {
       font-weight: 500;
       background-color: white;
