@@ -1,5 +1,4 @@
 .markdown {
-  margin: 1rem;
   line-height: 1.5rem;
 }
 
@@ -15,4 +14,17 @@
 .markdown h3,
 .markdown p {
   font-weight: 200;
+}
+
+.markdown pre {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: #f1f1f1;
+  overflow: scroll;
+  max-height: 200px;
+}
+
+.markdown code {
+  font-family: courier, monospace;
+  font-size: 0.8rem;
 }

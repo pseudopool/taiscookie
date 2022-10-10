@@ -21,10 +21,7 @@ const posttitle = css`
   h1 {
     font-weight: 300;
     font-size: 2rem;
-    margin: 0.5rem 0;
-  }
-  h2 {
-    margin: 0;
+    margin: 1rem;
   }
 `;
 
