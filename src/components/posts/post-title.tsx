@@ -19,7 +19,7 @@ const posttitle = css`
     height: 200px;
   }
   h1 {
-    font-weight: 300;
+    font-weight: 500;
     font-size: 2rem;
     margin: 1rem;
   }

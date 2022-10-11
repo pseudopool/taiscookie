@@ -3,23 +3,37 @@
 }
 
 .markdown h1 {
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .markdown h2 {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.3rem;
+  color: rgb(0, 0, 127);
+  border-bottom: 1px solid #00000020;
+  padding-bottom: 0.5rem;
 }
 
 .markdown h3,
 .markdown p {
-  font-weight: 200;
+  font-weight: 300;
+}
+
+.markdown strong {
+  font-weight: 700;
+}
+
+.markdown li {
+  list-style: disc;
+  font-weight: 300;
 }
 
 .markdown pre {
   padding: 1rem;
   border-radius: 0.5rem;
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
+  background-color: rgb(28, 23, 85);
+  color: white;
   overflow: scroll;
   max-height: 200px;
 }

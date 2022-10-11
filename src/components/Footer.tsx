@@ -2,6 +2,7 @@ import { css } from "@emotion/react";
 
 export default function Footer() {
   const footer = css`
+    text-align: center;
     width: 100%;
     bottom: 0px;
     padding: 1rem;

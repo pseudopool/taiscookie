@@ -35,6 +35,7 @@ const Home: NextPage = () => {
       grid-gap: 0;
     }
   `;
+
   return (
     <article css={index}>
       <p>
