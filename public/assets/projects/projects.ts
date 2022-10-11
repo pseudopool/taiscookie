@@ -24,7 +24,7 @@ export const projects = [
     title: "shelf surfer",
     description:
       "매일의 무드에 맞게 나만의 책장 만들 수 있는 북리스트 앱입니다. firebase OAuth를 통해 회원가입 및 로그인을 구현하고, 네이버 책 API를 연동해 원하는 도서를 검색할 수 있습니다. firestore DB로 나만의 책장을 생성, 수정, 삭제할 수 있습니다. NextJS로 서버 사이드 데이터 페치를 실습하기 위해 제작했습니다.",
-    github: "https://github.com/pseudopool/toomanythoughts",
+    github: "https://github.com/pseudopool/shelfsurfer",
     skills: ["Next.js", "Emotion", "Firebase", "Recoil", "Vercel"],
     blog: "/posts",
   },
@@ -46,8 +46,8 @@ export const projects = [
     title: "ㅅㅊ",
     description:
       "프론트엔드 개발자 2인, 백엔드 개발자 2인이 협업해 제작한 동네 기반 반려견 산책 모임 플랫폼입니다. 인덱스 페이지의 산책 모임 프리뷰, 마이 페이지의 반려견 및 유저 정보 조회, 등록, 수정, 삭제를 구현했습니다. React Query를 도입해, 데이터 상태에 따라 다양한 컴포넌트가 렌더 되도록 하는 기술적 도전을 했습니다.",
-    github: "https://github.com/codestates-seb/seb39_main_026",
-    skills: ["TypeScript", "Next.jS", "React Query", "Recoil", "Emotion"],
+    github: "https://github.com/project-sancheck/sancheck",
+    skills: ["TypeScript", "Next.js", "React Query", "Recoil", "Emotion"],
     blog: "/posts",
   },
 ];

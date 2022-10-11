@@ -42,3 +42,8 @@
   font-family: courier, monospace;
   font-size: 0.8rem;
 }
+
+.markdown hr {
+  border: 1px solid #00000010;
+  margin: 1.5rem;
+}

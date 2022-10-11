@@ -9,5 +9,5 @@ export default function Footer() {
     font-size: 0.9rem;
     color: #b4b4b4;
   `;
-  return <footer css={footer}>@TAIS COOKIE by Tai Song </footer>;
+  return <footer css={footer}>@타이의 쿠키 by Tai Song </footer>;
 }
