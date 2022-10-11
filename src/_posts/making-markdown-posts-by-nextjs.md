@@ -1,5 +1,5 @@
 ---
-title: "❓ 대체 마크다운 파일이 어떻게 블로그 포스트가 된다는 건데"
+title: "대체 마크다운 파일이 어떻게 블로그 포스트가 된다는 건데❓"
 excerpt: "fs 파일 가져오기부터 마크다운 파싱까지, Next.js로 블로그 만들기 A to Z"
 coverImage: "/assets/posts/making-markdown-posts-by-nextjs/cover.png"
 date: "2022-10-10T05:35:07.322Z"

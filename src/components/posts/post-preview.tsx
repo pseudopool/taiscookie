@@ -16,6 +16,7 @@ const preview = css`
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   h3 {
     margin: 0 0 0.1rem 0;
     font-weight: 500;
