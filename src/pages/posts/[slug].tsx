@@ -21,12 +21,12 @@ export default function Post({ post, morePosts, preview }: Props) {
   return (
     <>
       {router.isFallback ? (
-        "Loading…"
+        ""
       ) : (
         <>
           <article>
             <Head>
-              <title>{post.title} | 타이의 블로그</title>
+              <title>{post.title} | 타이의 쿠키</title>
               <meta property="og:image" content={post.ogImage.url} />
             </Head>
             <PostTitle

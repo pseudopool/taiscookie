@@ -11,7 +11,7 @@ export default function Index({ allPosts }: Props) {
   return (
     <>
       <Head>
-        <title>타이의 블로그</title>
+        <title>포스트 | 타이의 쿠키</title>
       </Head>
       <AllPosts posts={allPosts} />
     </>

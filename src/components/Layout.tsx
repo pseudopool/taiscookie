@@ -8,6 +8,7 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.png" />
+        <title>타이의 쿠키</title>
       </Head>
       <Navbar />
       <main>{children}</main>
