@@ -45,7 +45,7 @@ export const projects = [
     imgUrl: "/assets/projects/images/metaSancheck.png",
     title: "ㅅㅊ",
     description:
-      "프론트엔드 개발자 2인, 백엔드 개발자 2인이 협업해 만든 로컬 펫 개더링 플랫폼입니다. 인덱스 페이지의 산책 모임 프리뷰, 마이 페이지의 반려견 및 유저 정보 조회, 등록, 수정, 삭제를 구현했습니다. React Query를 도입해, 데이터 상태에 따라 다양한 컴포넌트가 렌더 되도록 하는 기술적 도전을 했습니다.",
+      "프론트엔드 개발자 2인, 백엔드 개발자 2인이 협업해 제작한 동네 기반 반려견 산책 모임 플랫폼입니다. 인덱스 페이지의 산책 모임 프리뷰, 마이 페이지의 반려견 및 유저 정보 조회, 등록, 수정, 삭제를 구현했습니다. React Query를 도입해, 데이터 상태에 따라 다양한 컴포넌트가 렌더 되도록 하는 기술적 도전을 했습니다.",
     github: "https://github.com/codestates-seb/seb39_main_026",
     skills: ["TypeScript", "Next.jS", "React Query", "Recoil", "Emotion"],
     blog: "/posts",
