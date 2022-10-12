@@ -13,7 +13,7 @@ export default function Portfolio() {
       margin-top: 1.5rem;
       max-width: 1000px;
       display: grid;
-      grid-template-columns: 45% 45%;
+      grid-template-columns: 30% 30% 30%;
       place-content: center;
       grid-gap: 1.5rem;
     }

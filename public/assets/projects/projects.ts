@@ -15,19 +15,19 @@ export const projects = [
       "Webpack",
       "Firebase",
     ],
-    blog: "/posts",
+    blog: "/posts/firebase-ver-9",
   },
-  {
-    id: 1,
-    date: "2022-07",
-    imgUrl: "",
-    title: "shelf surfer",
-    description:
-      "매일의 무드에 맞게 나만의 책장 만들 수 있는 북리스트 앱입니다. firebase OAuth를 통해 회원가입 및 로그인을 구현하고, 네이버 책 API를 연동해 원하는 도서를 검색할 수 있습니다. firestore DB로 나만의 책장을 생성, 수정, 삭제할 수 있습니다. NextJS로 서버 사이드 데이터 페치를 실습하기 위해 제작했습니다.",
-    github: "https://github.com/pseudopool/shelfsurfer",
-    skills: ["Next.js", "Emotion", "Firebase", "Recoil", "Vercel"],
-    blog: "/posts",
-  },
+  // {
+  //   id: 1,
+  //   date: "2022-07",
+  //   imgUrl: "",
+  //   title: "shelf surfer",
+  //   description:
+  //     "매일의 무드에 맞게 나만의 책장 만들 수 있는 북리스트 앱입니다. firebase OAuth를 통해 회원가입 및 로그인을 구현하고, 네이버 책 API를 연동해 원하는 도서를 검색할 수 있습니다. firestore DB로 나만의 책장을 생성, 수정, 삭제할 수 있습니다. NextJS로 서버 사이드 데이터 페치를 실습하기 위해 제작했습니다.",
+  //   github: "https://github.com/pseudopool/shelfsurfer",
+  //   skills: ["Next.js", "Emotion", "Firebase", "Recoil", "Vercel"],
+  //   blog: "/posts",
+  // },
   {
     id: 2,
     date: "2022-10",
