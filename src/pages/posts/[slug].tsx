@@ -1,23 +1,24 @@
 import { useRouter } from "next/router";
-import ErrorPage from "next/error";
 import { getPostBySlug, getAllPosts } from "../../utils/api";
-import Head from "next/head";
 import markdownToHtml from "../../utils/markdownToHtml";
-import type PostType from "../../interfaces/post";
-import PostBody from "../../components/posts/post-body";
+import Head from "next/head";
+import ErrorPage from "next/error";
 import PostTitle from "../../components/posts/post-title";
+import PostBody from "../../components/posts/post-body";
+import type PostType from "../../interfaces/post";
 
 type Props = {
   post: PostType;
-  morePosts: PostType[];
   preview?: boolean;
 };
 
-export default function Post({ post, morePosts, preview }: Props) {
+export default function Post({ post }: Props) {
   const router = useRouter();
+
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+
   return (
     <>
       {router.isFallback ? (

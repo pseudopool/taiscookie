@@ -2,7 +2,7 @@
 title: "데이터 상태의 평화를 위한 React Query 🕊"
 excerpt: "데이터 상태 컨트롤부터 유저 행동에 따른 데이터 업데이트까지, 리액트 쿼리 도입기"
 coverImage: "/assets/posts/react-query-for-peace/cover.png"
-date: "2022-10-12T05:35:07.322Z"
+date: "2022-10-11T05:35:07.322Z"
 ogImage:
   url: "/assets/posts/react-query-for-peace/cover.png"
 ---
