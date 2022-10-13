@@ -16,6 +16,8 @@ const CoverImage = ({ title, src, slug }: Props) => {
       width="100px"
       height="100px"
       css={css`
+        width: 100px;
+        height: 100px;
         border-radius: 1rem;
         object-fit: cover;
         margin-left: 1rem;

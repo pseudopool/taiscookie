@@ -62,5 +62,6 @@ const index = css`
     display: flex;
     flex-direction: column;
     grid-gap: 0;
+    height: 100%;
   }
 `;
