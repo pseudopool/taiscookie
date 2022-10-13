@@ -40,7 +40,7 @@ const allposts = css`
   flex-direction: column;
   align-items: center;
   h2 {
-    font-family: "Courier New", Courier, monospace;
+    font-family: Courier;
     text-align: center;
     font-weight: 300;
     font-size: 1.2rem;
