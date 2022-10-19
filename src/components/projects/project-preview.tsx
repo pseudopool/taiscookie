@@ -10,43 +10,6 @@ type Props = {
 };
 
 export default function Project({ project }: Props) {
-  const projectItem = css`
-    display: flex;
-    flex-direction: column;
-    .thumbnail {
-      cursor: pointer;
-      background-color: #b4b4b4;
-      border-radius: 15px;
-      object-fit: cover;
-    }
-    span {
-      color: #b4b4b4;
-      font-size: 0.8rem;
-      text-align: center;
-    }
-    h1 {
-      font-weight: 700;
-      text-align: center;
-      font-family: "Courier New", Courier, monospace;
-      padding-bottom: 0.5rem;
-      margin-bottom: 0.5rem;
-      border-bottom: 1px solid #00000020;
-    }
-    h2 {
-      margin: 0.5rem 0;
-      font-size: 1rem;
-      font-weight: 300;
-      line-height: 1.3rem;
-    }
-    aside {
-      display: flex;
-      flex-direction: column;
-      a {
-        color: ${Theme.mainFontColor};
-        margin-bottom: 0.5rem;
-      }
-    }
-  `;
   return (
     <>
       <article key={project.id} css={projectItem}>
@@ -75,3 +38,41 @@ export default function Project({ project }: Props) {
     </>
   );
 }
+
+const projectItem = css`
+  display: flex;
+  flex-direction: column;
+  .thumbnail {
+    cursor: pointer;
+    background-color: #b4b4b4;
+    border-radius: 15px;
+    object-fit: cover;
+  }
+  span {
+    color: #b4b4b4;
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  h1 {
+    font-weight: 700;
+    text-align: center;
+    font-family: "Courier New", Courier, monospace;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #00000020;
+  }
+  h2 {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.3rem;
+  }
+  aside {
+    display: flex;
+    flex-direction: column;
+    a {
+      color: ${Theme.mainFontColor};
+      margin-bottom: 0.5rem;
+    }
+  }
+`;
