@@ -20,6 +20,8 @@ export default function PdfLink() {
 }
 
 const link = css`
+  position: fixed;
+  z-index: 1;
   width: 100%;
   background-color: white;
   border-radius: 0 0 1rem 1rem;
