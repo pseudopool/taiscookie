@@ -6,6 +6,7 @@ import ErrorPage from "next/error";
 import PostTitle from "../../components/posts/post-title";
 import PostBody from "../../components/posts/post-body";
 import type PostType from "../../interfaces/post";
+import { getPlaiceholder } from "plaiceholder";
 
 type Props = {
   post: PostType;
@@ -33,7 +34,8 @@ export default function Post({ post }: Props) {
             <PostTitle
               title={post.title}
               date={post.date}
-              img={post.ogImage.url}
+              img={post.coverImage}
+              blurDataURL={post.blurDataURL}
             />
             <PostBody content={post.content} />
           </article>
@@ -59,11 +61,15 @@ export async function getStaticProps({ params }: Params) {
     "coverImage",
   ]);
   const content = await markdownToHtml(post.content || "");
+  const blurDataURL = await getPlaiceholder(post.coverImage).then(
+    (res) => res.base64
+  );
 
   return {
     props: {
       post: {
         ...post,
+        blurDataURL,
         content,
       },
     },

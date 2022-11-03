@@ -6,10 +6,11 @@ import Image from "next/image";
 type Props = {
   title: string;
   src: string;
+  blurDataURL: string;
   slug?: string;
 };
 
-const CoverImage = ({ title, src, slug }: Props) => {
+const CoverImage = ({ title, src, blurDataURL, slug }: Props) => {
   const image = (
     <div
       css={css`
@@ -24,9 +25,11 @@ const CoverImage = ({ title, src, slug }: Props) => {
         height="100px"
         alt={`Cover Image for ${title}`}
         css={css`
-          border-radius: 1rem;
           object-fit: cover;
+          border-radius: 1rem;
         `}
+        placeholder="blur"
+        blurDataURL={blurDataURL}
       />
     </div>
   );

@@ -5,6 +5,7 @@ type ProjectType = {
   date: string;
   skills: string[];
   imgUrl: string;
+  blurDataURL: string;
   blog: string;
   github: string;
 };

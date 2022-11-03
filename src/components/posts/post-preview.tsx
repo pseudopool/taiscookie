@@ -6,12 +6,20 @@ import { css } from "@emotion/react";
 type Props = {
   title: string;
   coverImage: string;
+  blurDataURL: string;
   date: string;
   excerpt: string;
   slug: string;
 };
 
-const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) => {
+const PostPreview = ({
+  title,
+  coverImage,
+  blurDataURL,
+  date,
+  excerpt,
+  slug,
+}: Props) => {
   return (
     <li css={preview}>
       <div className="post-des">
@@ -23,7 +31,12 @@ const PostPreview = ({ title, coverImage, date, excerpt, slug }: Props) => {
         <DateFormatter dateString={date} />
         <p>{excerpt}</p>
       </div>
-      <CoverImage slug={slug} title={title} src={coverImage} />
+      <CoverImage
+        slug={slug}
+        title={title}
+        src={coverImage}
+        blurDataURL={blurDataURL}
+      />
     </li>
   );
 };

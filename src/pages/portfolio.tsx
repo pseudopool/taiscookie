@@ -1,10 +1,16 @@
 import { css } from "@emotion/react";
 import Head from "next/head";
+import { getPlaiceholder } from "plaiceholder";
 import { projects } from "../../public/assets/projects/projects";
 import PdfLink from "../components/projects/portfolio-link";
 import Project from "../components/projects/project-preview";
+import ProjectType from "../interfaces/project";
 
-export default function Portfolio() {
+type Props = {
+  allProjects: ProjectType[];
+};
+
+export default function Portfolio({ allProjects }: Props) {
   return (
     <>
       <Head>
@@ -13,7 +19,7 @@ export default function Portfolio() {
       <PdfLink />
       <section css={portfolio}>
         <div>
-          {projects
+          {allProjects
             // 최근 작성순 정렬
             .sort((pr1, pr2) => (pr1.id > pr2.id ? -1 : 1))
             .map((project) => {
@@ -24,6 +30,18 @@ export default function Portfolio() {
     </>
   );
 }
+
+export const getStaticProps = async () => {
+  const allProjects = await Promise.all(
+    projects.map(async (project) => {
+      const { base64 } = await getPlaiceholder(project.imgUrl);
+      return { ...project, blurDataURL: base64 };
+    })
+  );
+  return {
+    props: { allProjects },
+  };
+};
 
 const portfolio = css`
   display: flex;

@@ -23,6 +23,7 @@ const AllPosts = ({ posts }: Props) => {
             key={post.slug}
             title={post.title}
             coverImage={post.coverImage}
+            blurDataURL={post.blurDataURL}
             date={post.date}
             slug={post.slug}
             excerpt={post.excerpt}

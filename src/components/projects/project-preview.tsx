@@ -20,6 +20,8 @@ export default function Project({ project }: Props) {
             width="300px"
             height="300px"
             className="thumbnail"
+            placeholder="blur"
+            blurDataURL={project.blurDataURL}
           />
         </Link>
         <h1>{project.title}</h1>

@@ -1,12 +1,32 @@
-/* eslint-disable @next/next/no-img-element */
 import { css } from "@emotion/react";
 import DateFormatter from "./date-formatter";
+import Image from "next/image";
 
 type Props = {
   title: string;
   date: string;
   img: string;
+  blurDataURL: string;
 };
+
+const PostTitle = ({ title, date, img, blurDataURL }: Props) => {
+  return (
+    <div css={posttitle}>
+      <Image
+        src={img}
+        alt={title}
+        width="800px"
+        height="200px"
+        placeholder="blur"
+        blurDataURL={blurDataURL}
+      />
+      <h1>{title}</h1>
+      <DateFormatter dateString={date} />
+    </div>
+  );
+};
+
+export default PostTitle;
 
 const posttitle = css`
   display: flex;
@@ -14,8 +34,6 @@ const posttitle = css`
   align-items: center;
   img {
     object-fit: cover;
-    width: 100%;
-    max-width: 800px;
     height: 200px;
   }
   h1 {
@@ -24,15 +42,3 @@ const posttitle = css`
     margin: 1rem;
   }
 `;
-
-const PostTitle = ({ title, date, img }: Props) => {
-  return (
-    <div css={posttitle}>
-      <img src={img} alt={title} />
-      <h1>{title}</h1>
-      <DateFormatter dateString={date} />
-    </div>
-  );
-};
-
-export default PostTitle;
