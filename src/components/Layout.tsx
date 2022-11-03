@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import Head from "next/head";
 import React from "react";
 import Footer from "./Footer";
