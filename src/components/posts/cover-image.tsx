@@ -12,22 +12,12 @@ type Props = {
 
 const CoverImage = ({ title, src, blurDataURL, slug }: Props) => {
   const image = (
-    <div
-      css={css`
-        width: 100px;
-        height: 100px;
-        margin-left: 1rem;
-      `}
-    >
+    <div css={img}>
       <Image
         src={src}
         width="100px"
         height="100px"
         alt={`Cover Image for ${title}`}
-        css={css`
-          object-fit: cover;
-          border-radius: 1rem;
-        `}
         placeholder="blur"
         blurDataURL={blurDataURL}
       />
@@ -45,5 +35,13 @@ const CoverImage = ({ title, src, blurDataURL, slug }: Props) => {
     </>
   );
 };
+
+const img = css`
+  width: 100px;
+  height: 100px;
+  margin-left: 1rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+`;
 
 export default CoverImage;

@@ -19,7 +19,6 @@ export default function Project({ project }: Props) {
             src={project.imgUrl}
             width="300px"
             height="300px"
-            className="thumbnail"
             placeholder="blur"
             blurDataURL={project.blurDataURL}
           />
@@ -44,10 +43,10 @@ export default function Project({ project }: Props) {
 const projectItem = css`
   display: flex;
   flex-direction: column;
-  .thumbnail {
+  img {
     cursor: pointer;
     background-color: #b4b4b4;
-    border-radius: 15px;
+    border-radius: 1rem;
     object-fit: cover;
   }
   span {
