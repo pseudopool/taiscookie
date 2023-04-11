@@ -7,7 +7,7 @@ type Props = {
   allPortfolio: Portfolio[];
 };
 
-const PortFolio = ({ allPortfolio }: Props) => {
+const AllPortFolio = ({ allPortfolio }: Props) => {
   return (
     <section>
       <AllPortfolio portfolios={allPortfolio} />
@@ -15,7 +15,7 @@ const PortFolio = ({ allPortfolio }: Props) => {
   );
 };
 
-export default PortFolio;
+export default AllPortFolio;
 
 export const getStaticProps = async () => {
   const allPortfolio = await Promise.all(
