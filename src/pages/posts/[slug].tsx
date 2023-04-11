@@ -25,21 +25,19 @@ export default function Post({ post }: Props) {
       {router.isFallback ? (
         ""
       ) : (
-        <>
-          <article>
-            <Head>
-              <title>{post.title} | 타이의 쿠키</title>
-              <meta property="og:image" content={post.ogImage.url} />
-            </Head>
-            <PostTitle
-              title={post.title}
-              date={post.date}
-              img={post.coverImage}
-              blurDataURL={post.blurDataURL}
-            />
-            <PostBody content={post.content} />
-          </article>
-        </>
+        <article>
+          <Head>
+            <title>{post.title} | 타이의 쿠키</title>
+            <meta property="og:image" content={post.ogImage.url} />
+          </Head>
+          <PostTitle
+            title={post.title}
+            date={post.date}
+            img={post.coverImage}
+            blurDataURL={post.blurDataURL}
+          />
+          <PostBody content={post.content} />
+        </article>
       )}
     </>
   );
