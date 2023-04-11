@@ -10,8 +10,8 @@ const CoverImage = ({ src, title, blurDataURL }: Props) => {
   return (
     <Image
       src={src}
-      width="800px"
-      height="800px"
+      width={800}
+      height={800}
       alt={`Cover Image for ${title}`}
       placeholder="blur"
       blurDataURL={blurDataURL}

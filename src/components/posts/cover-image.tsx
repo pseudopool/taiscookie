@@ -15,8 +15,8 @@ const CoverImage = ({ title, src, blurDataURL, slug }: Props) => {
     <div css={img}>
       <Image
         src={src}
-        width="100px"
-        height="100px"
+        width={100}
+        height={100}
         alt={`Cover Image for ${title}`}
         placeholder="blur"
         blurDataURL={blurDataURL}

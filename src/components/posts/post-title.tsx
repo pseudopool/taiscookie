@@ -15,8 +15,8 @@ const PostTitle = ({ title, date, img, blurDataURL }: Props) => {
       <Image
         src={img}
         alt={title}
-        width="800px"
-        height="200px"
+        width={800}
+        height={200}
         placeholder="blur"
         blurDataURL={blurDataURL}
       />

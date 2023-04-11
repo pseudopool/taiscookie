@@ -1,6 +1,6 @@
 import { portfolios } from "_portfolios";
 import AllPortfolio from "components/portfolio/all-portfolio";
-import Portfolio from "interfaces/portfolio";
+import { Portfolio } from "interfaces/portfolio";
 import { getPlaiceholder } from "plaiceholder";
 
 type Props = {

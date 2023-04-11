@@ -1,6 +1,6 @@
 import { css } from "@emotion/react";
 import CoverImage from "./cover-image";
-import Portfolio from "interfaces/portfolio";
+import { Portfolio } from "interfaces/portfolio";
 import Link from "next/link";
 
 const PortfolioPreview = ({
