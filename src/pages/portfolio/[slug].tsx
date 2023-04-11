@@ -1,37 +1,22 @@
-import { useRouter } from "next/router";
 import Head from "next/head";
-import ErrorPage from "next/error";
 import { portfolios } from "_portfolios";
-import Portfolio from "interfaces/portfolio";
+import type { Content } from "interfaces/portfolio";
 import { getPlaiceholder } from "plaiceholder";
-import CoverImage from "components/portfolio/cover-image";
 import Ing from "components/portfolio/ing";
 
 type Props = {
-  portfolio: Portfolio;
+  portfolio: Content;
 };
 
 const PortfolioDetail = ({ portfolio }: Props) => {
-  const router = useRouter();
-
-  if (!router.isFallback && !portfolio?.path) {
-    return <ErrorPage statusCode={404} />;
-  }
-
   return (
-    <>
-      {router.isFallback ? (
-        ""
-      ) : (
-        <article>
-          <Head>
-            <title>{portfolio.title} | 타이의 쿠키</title>
-            <meta property="og:image" content={portfolio.thumbnail} />
-          </Head>
-          <Ing />
-        </article>
-      )}
-    </>
+    <article>
+      <Head>
+        <title>{portfolio.name} | 타이의 쿠키</title>
+        <meta property="og:image" content={portfolio.imageUrl} />
+      </Head>
+      <Ing />
+    </article>
   );
 };
 
@@ -47,7 +32,6 @@ export async function getStaticProps({ params }: Params) {
   const portfolio = portfolios.find(
     (portfolio) => portfolio.path === params.slug
   );
-  console.log(portfolio);
   if (!portfolio) {
     return {
       notFound: true,
@@ -59,7 +43,7 @@ export async function getStaticProps({ params }: Params) {
   return {
     props: {
       portfolio: {
-        ...portfolio,
+        ...portfolio.content,
         blurDataURL: base64,
       },
     },
