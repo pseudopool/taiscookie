@@ -1,4 +1,4 @@
-import Portfolio from "interfaces/portfolio";
+import { Portfolio } from "interfaces/portfolio";
 import PortfolioPreview from "./portfolio-preview";
 import { css } from "@emotion/react";
 
