@@ -1,7 +1,7 @@
-import AllPosts from "../../components/posts/all-posts";
-import { getAllPosts } from "../../utils/api";
+import AllPosts from "components/posts/all-posts";
+import { getAllPosts } from "utils/api";
 import Head from "next/head";
-import Post from "../../interfaces/post";
+import Post from "interfaces/post";
 import { getPlaiceholder } from "plaiceholder";
 
 type Props = {

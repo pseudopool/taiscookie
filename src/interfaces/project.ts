@@ -1,4 +1,4 @@
-type ProjectType = {
+type Project = {
   id: number;
   title: string;
   description: string;
@@ -10,4 +10,4 @@ type ProjectType = {
   github: string;
 };
 
-export default ProjectType;
+export default Project;
