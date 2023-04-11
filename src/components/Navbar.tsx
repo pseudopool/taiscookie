@@ -1,6 +1,22 @@
 import { css } from "@emotion/react";
 import Link from "next/link";
 
+const menus = [
+  {
+    name: "홈",
+    path: "/",
+    mobileDisplay: "none",
+  },
+  {
+    name: "포스트",
+    path: "/posts",
+  },
+  {
+    name: "포트폴리오",
+    path: "/portfolio",
+  },
+];
+
 export default function Navbar() {
   return (
     <nav css={navbar}>
@@ -8,12 +24,11 @@ export default function Navbar() {
         <h1>🍪 타이의 쿠키</h1>
       </Link>
       <ul>
-        <Link href="/">
-          <li className="home">홈</li>
-        </Link>
-        <Link href="/posts">
-          <li>포스트</li>
-        </Link>
+        {menus.map((menu) => (
+          <Link key={menu.name} href={menu.path}>
+            <li className={menu.mobileDisplay}>{menu.name}</li>
+          </Link>
+        ))}
       </ul>
     </nav>
   );
@@ -52,7 +67,7 @@ const navbar = css`
   }
   @media screen and (max-width: 480px) {
     font-size: 4vw;
-    .home {
+    .none {
       display: none;
     }
   }
