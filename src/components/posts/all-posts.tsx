@@ -1,7 +1,7 @@
 import PostPreview from "./post-preview";
-import type Post from "../../interfaces/post";
+import type Post from "interfaces/post";
 import { css } from "@emotion/react";
-import { Theme } from "../../styles/Theme";
+import { Theme } from "styles/Theme";
 
 type Props = {
   posts: Post[];

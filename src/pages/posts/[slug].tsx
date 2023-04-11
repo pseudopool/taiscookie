@@ -1,11 +1,11 @@
 import { useRouter } from "next/router";
-import { getPostBySlug, getAllPosts } from "../../utils/api";
-import markdownToHtml from "../../utils/markdownToHtml";
+import { getPostBySlug, getAllPosts } from "utils/api";
+import markdownToHtml from "utils/markdownToHtml";
 import Head from "next/head";
 import ErrorPage from "next/error";
-import PostTitle from "../../components/posts/post-title";
-import PostBody from "../../components/posts/post-body";
-import type PostType from "../../interfaces/post";
+import PostTitle from "components/posts/post-title";
+import PostBody from "components/posts/post-body";
+import type PostType from "interfaces/post";
 import { getPlaiceholder } from "plaiceholder";
 
 type Props = {

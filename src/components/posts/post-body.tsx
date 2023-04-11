@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-import markdownStyles from "../../styles/markdown-styles.module.css";
+import markdownStyles from "styles/markdown-styles.module.css";
 
 type Props = {
   content: string;

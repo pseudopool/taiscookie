@@ -11,9 +11,6 @@ export default function Navbar() {
         <Link href="/">
           <li className="home">홈</li>
         </Link>
-        <Link href="/portfolio">
-          <li>포트폴리오</li>
-        </Link>
         <Link href="/posts">
           <li>포스트</li>
         </Link>

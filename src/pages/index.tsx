@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import { css } from "@emotion/react";
-import { Theme } from "../styles/Theme";
+import { Theme } from "styles/Theme";
 
 const Home: NextPage = () => {
   return (
