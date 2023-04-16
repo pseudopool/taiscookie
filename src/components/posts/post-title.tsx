@@ -35,6 +35,8 @@ const posttitle = css`
   img {
     object-fit: cover;
     height: 200px;
+    width: 100%;
+    max-width: 50rem;
   }
   h1 {
     font-weight: 500;
