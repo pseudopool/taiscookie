@@ -1,3 +1,4 @@
+import { css } from "@emotion/react";
 import Image from "next/image";
 
 type Props = {
@@ -15,7 +16,6 @@ const CoverImage = ({ src, title, blurDataURL }: Props) => {
       alt={`Cover Image for ${title}`}
       placeholder="blur"
       blurDataURL={blurDataURL}
-      objectFit="cover"
     />
   );
 };

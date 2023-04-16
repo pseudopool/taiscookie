@@ -11,8 +11,8 @@ const PortfolioPreview = ({
   blurDataURL,
 }: Portfolio) => {
   return (
-    <Link as={`/portfolio/${path}`} href="/portfolio/[slug]">
-      <li css={portfolioPreview}>
+    <Link as={`/portfolio/${path}`} href="/portfolio/[slug]" css={preview}>
+      <li>
         <CoverImage title={title} src={thumbnail} blurDataURL={blurDataURL} />
         <h3>
           {title} <span>{date}</span>
@@ -24,28 +24,31 @@ const PortfolioPreview = ({
 
 export default PortfolioPreview;
 
-const portfolioPreview = css`
-  width: 100%;
+const preview = css`
+  width: 100vw;
   max-width: 40rem;
-  max-height: 20rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  list-style: none;
-  background-color: white;
-  border-radius: 0.5rem;
   margin: 0 1rem;
+  list-style: none;
   cursor: pointer;
+  li {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+  }
+  img {
+    width: inherit;
+    height: inherit;
+    filter: brightness(0.6);
+  }
   :hover {
     box-shadow: 0 0 1rem 0.5rem #f0f0f070;
     img {
-      // 천천히
       transition: filter 0.2s;
       filter: none;
     }
-  }
-  img {
-    filter: brightness(0.8);
   }
   h3 {
     color: #8f8e8e;
