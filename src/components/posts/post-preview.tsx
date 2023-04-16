@@ -23,11 +23,9 @@ const PostPreview = ({
   return (
     <li css={preview}>
       <div className="post-des">
-        <h3>
-          <Link as={`/posts/${slug}`} href="/posts/[slug]">
-            <a className="hover:underline">{title}</a>
-          </Link>
-        </h3>
+        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+          <h3 className="hover:underline">{title}</h3>
+        </Link>
         <DateFormatter dateString={date} />
         <p>{excerpt}</p>
       </div>
