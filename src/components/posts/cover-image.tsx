@@ -7,10 +7,10 @@ type Props = {
   title: string;
   src: string;
   blurDataURL: string;
-  slug?: string;
+  id?: string;
 };
 
-const CoverImage = ({ title, src, blurDataURL, slug }: Props) => {
+const CoverImage = ({ title, src, blurDataURL, id }: Props) => {
   const image = (
     <div css={img}>
       <Image
@@ -25,8 +25,8 @@ const CoverImage = ({ title, src, blurDataURL, slug }: Props) => {
   );
   return (
     <>
-      {slug ? (
-        <Link as={`/posts/${slug}`} href="/posts/[slug]" aria-label={title}>
+      {id ? (
+        <Link as={`/posts/${id}`} href="/posts/[id]" aria-label={title}>
           {image}
         </Link>
       ) : (

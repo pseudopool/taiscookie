@@ -9,7 +9,7 @@ type Props = {
   blurDataURL: string;
   date: string;
   excerpt: string;
-  slug: string;
+  id: string;
 };
 
 const PostPreview = ({
@@ -18,19 +18,19 @@ const PostPreview = ({
   blurDataURL,
   date,
   excerpt,
-  slug,
+  id,
 }: Props) => {
   return (
     <li css={preview}>
       <div className="post-des">
-        <Link as={`/posts/${slug}`} href="/posts/[slug]">
+        <Link as={`/posts/${id}`} href="/posts/[id]">
           <h3 className="hover:underline">{title}</h3>
         </Link>
         <DateFormatter dateString={date} />
         <p>{excerpt}</p>
       </div>
       <CoverImage
-        slug={slug}
+        id={id}
         title={title}
         src={coverImage}
         blurDataURL={blurDataURL}

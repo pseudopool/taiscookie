@@ -20,12 +20,12 @@ const AllPosts = ({ posts }: Props) => {
       >
         {posts.map((post) => (
           <PostPreview
-            key={post.slug}
+            key={post.id}
             title={post.title}
             coverImage={post.coverImage}
             blurDataURL={post.blurDataURL}
             date={post.date}
-            slug={post.slug}
+            id={post.id}
             excerpt={post.excerpt}
           />
         ))}

@@ -1,5 +1,5 @@
-type Post = {
-  slug: string;
+export type Post = {
+  id: string;
   title: string;
   date: string;
   coverImage: string;
@@ -10,5 +10,3 @@ type Post = {
   };
   content: string;
 };
-
-export default Post;

@@ -1,0 +1,101 @@
+import { useRouter } from "next/router";
+import { getPostBySlug } from "utils/api";
+import markdownToHtml from "utils/markdownToHtml";
+import Head from "next/head";
+import ErrorPage from "next/error";
+import PostTitle from "components/posts/post-title";
+import PostBody from "components/posts/post-body";
+import type { Post } from "interfaces/post";
+import { getPlaiceholder } from "plaiceholder";
+
+type Props = {
+  post: Post;
+  preview?: boolean;
+};
+
+export default function Post({ post }: Props) {
+  const router = useRouter();
+
+  if (!router.isFallback && !post?.id) {
+    return <ErrorPage statusCode={404} />;
+  }
+
+  return (
+    <>
+      {router.isFallback ? (
+        ""
+      ) : (
+        <article>
+          <Head>
+            <title>{post.title} | 타이의 쿠키</title>
+            <meta property="og:image" content={post.ogImage.url} />
+          </Head>
+          <PostTitle
+            title={post.title}
+            date={post.date}
+            img={post.coverImage}
+            blurDataURL={post.blurDataURL}
+          />
+          <PostBody content={post.content} />
+        </article>
+      )}
+    </>
+  );
+}
+
+type Params = {
+  params: {
+    id: string;
+  };
+};
+
+export async function getServerSideProps({ params: { id } }: Params) {
+  const post = await (
+    await fetch(`https://api.notion.com/v1/pages/${id}`, {
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_NOTION_API_KEY}`,
+        "Notion-Version": "2021-05-13",
+      },
+      method: "GET",
+    })
+  )
+    .json()
+    .then((res) => {
+      return {
+        title: res.properties.title.title[0].plain_text,
+        date: res.properties.date.date.start,
+        id: res.id,
+        url: res.url,
+        ogImage: res.properties.coverImage.files[0].file.url,
+        coverImage: res.properties.coverImage.files[0].file.url,
+        excerpt: res.properties.excerpt.rich_text[0].plain_text,
+      };
+    });
+
+  const markdown = await (
+    await fetch(`https://api.notion.com/v1/blocks/${id}/children`, {
+      headers: {
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_NOTION_API_KEY}`,
+        "Notion-Version": "2021-05-13",
+      },
+      method: "GET",
+    })
+  )
+    .json()
+    .then((res) => res.results[0].code.text[0].plain_text);
+  const content = await markdownToHtml(markdown || "");
+
+  const blurDataURL = await getPlaiceholder(post.coverImage).then(
+    (res) => res.base64
+  );
+
+  return {
+    props: {
+      post: {
+        ...post,
+        blurDataURL,
+        content,
+      },
+    },
+  };
+}
