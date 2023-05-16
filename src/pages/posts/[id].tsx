@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { getPostBySlug } from "utils/api";
 import markdownToHtml from "utils/markdownToHtml";
 import Head from "next/head";
 import ErrorPage from "next/error";
@@ -7,6 +6,7 @@ import PostTitle from "components/posts/post-title";
 import PostBody from "components/posts/post-body";
 import type { Post } from "interfaces/post";
 import { getPlaiceholder } from "plaiceholder";
+import fetchPosts from "apis/fetchPosts";
 
 type Props = {
   post: Post;
@@ -49,7 +49,7 @@ type Params = {
   };
 };
 
-export async function getServerSideProps({ params: { id } }: Params) {
+export async function getStaticProps({ params: { id } }: Params) {
   const post = await (
     await fetch(`https://api.notion.com/v1/pages/${id}`, {
       headers: {
@@ -97,5 +97,26 @@ export async function getServerSideProps({ params: { id } }: Params) {
         content,
       },
     },
+  };
+}
+
+export async function getStaticPaths() {
+  const posts = await fetchPosts().then((res) =>
+    res.results.map((post: any) => {
+      return {
+        id: post.id,
+      };
+    })
+  );
+
+  return {
+    paths: posts.map((post: any) => {
+      return {
+        params: {
+          id: post.id,
+        },
+      };
+    }),
+    fallback: false,
   };
 }
