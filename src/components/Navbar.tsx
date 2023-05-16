@@ -23,13 +23,15 @@ export default function Navbar() {
       <Link href="/">
         <h1>🍪 타이의 쿠키</h1>
       </Link>
-      <ul>
+      <menu>
         {menus.map((menu) => (
-          <Link key={menu.name} href={menu.path}>
-            <li className={menu.mobileDisplay}>{menu.name}</li>
-          </Link>
+          <li key={menu.name} className={menu.mobileDisplay}>
+            <Link key={menu.name} href={menu.path}>
+              {menu.name}
+            </Link>
+          </li>
         ))}
-      </ul>
+      </menu>
     </nav>
   );
 }
@@ -52,7 +54,7 @@ const navbar = css`
     color: #1a254b;
     cursor: pointer;
   }
-  ul {
+  menu {
     padding: 0;
     display: flex;
     li {
