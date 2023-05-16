@@ -18,7 +18,7 @@ export default function Index({ allPosts }: Props) {
   );
 }
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   // get posts from notion database
   const notionPosts = await (
     await fetch(
