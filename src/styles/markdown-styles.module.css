@@ -31,16 +31,12 @@
 .markdown pre {
   padding: 1rem;
   border-radius: 0.5rem;
-  /* background-color: #f1f1f1; */
-  background-color: rgb(28, 23, 85);
-  color: white;
-  overflow: scroll;
-  max-height: 200px;
 }
 
 .markdown code {
   font-family: courier, monospace;
   font-size: 0.8rem;
+  border-radius: 0.5rem;
 }
 
 .markdown hr {

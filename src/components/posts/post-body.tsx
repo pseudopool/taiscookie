@@ -1,5 +1,13 @@
 import { css } from "@emotion/react";
+import { useEffect } from "react";
+
+import "highlight.js/styles/atom-one-dark.css";
+import hljs from "highlight.js/lib/core";
+import javascript from "highlight.js/lib/languages/javascript";
+
 import markdownStyles from "styles/markdown-styles.module.css";
+
+hljs.registerLanguage("javascript", javascript);
 
 type Props = {
   content: string;
@@ -18,6 +26,13 @@ const postbody = css`
 `;
 
 const PostBody = ({ content }: Props) => {
+  useEffect(() => {
+    const codeBlocks = document.querySelectorAll("code");
+    codeBlocks.forEach((codeBlock) => {
+      hljs.highlightBlock(codeBlock);
+    });
+  }, []);
+
   return (
     <div css={postbody}>
       <div
