@@ -29,7 +29,7 @@ const PostBody = ({ content }: Props) => {
   useEffect(() => {
     const codeBlocks = document.querySelectorAll("code");
     codeBlocks.forEach((codeBlock) => {
-      hljs.highlightBlock(codeBlock);
+      hljs.highlightElement(codeBlock);
     });
   }, []);
 
