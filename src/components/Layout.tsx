@@ -8,6 +8,10 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.png" />
+        <meta
+          name="google-site-verification"
+          content="DDEZrz9lubJFHFHFDO426TLckWKDClbXLoB4_T3RVk8"
+        />
         <title>타이의 쿠키</title>
       </Head>
       <Navbar />
