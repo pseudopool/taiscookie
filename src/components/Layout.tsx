@@ -2,7 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
-import { addNavigationJsonLd } from "utils/addProductJsonLd";
+import { addNavigationJsonLd } from "utils/addNavigationJsonLd";
 
 export default function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
