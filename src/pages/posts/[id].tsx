@@ -28,6 +28,9 @@ export default function Post({ post }: Props) {
         <article>
           <Head>
             <title>{post.title} | 타이의 쿠키</title>
+            <meta name="description" content={post.excerpt} />
+            <meta property="og:title" content={post.title} />
+            <meta property="og:description" content={post.excerpt} />
             <meta property="og:image" content={post.ogImage.url} />
           </Head>
           <PostTitle
