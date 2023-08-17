@@ -1,8 +1,8 @@
 import fetchPosts from "apis/fetchPosts";
+import { URL } from "consts/url";
 import { Post } from "interfaces/post";
 import { formatNotionPost } from "utils/formatNotionPost";
 
-const URL = "https://taiscookie.vercel.app";
 const POSTS_URL = URL + "/posts";
 
 function generateSiteMap(posts: Post[]) {

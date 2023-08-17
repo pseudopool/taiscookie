@@ -7,6 +7,7 @@ import PostBody from "components/posts/post-body";
 import type { Post } from "interfaces/post";
 import { getPlaiceholder } from "plaiceholder";
 import fetchPosts from "apis/fetchPosts";
+import { URL } from "consts/url";
 
 type Props = {
   post: Post;
@@ -28,6 +29,11 @@ export default function Post({ post }: Props) {
         <article>
           <Head>
             <title>{post.title} | 타이의 쿠키</title>
+            <link
+              rel="canonical"
+              href={URL + "/posts/" + post.id}
+              key="canonical"
+            />
             <meta name="description" content={post.excerpt} />
             <meta property="og:title" content={post.title} />
             <meta property="og:description" content={post.excerpt} />
