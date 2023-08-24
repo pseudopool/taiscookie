@@ -12,8 +12,8 @@ const menus = [
     path: "/posts",
   },
   {
-    name: "포트폴리오",
-    path: "/portfolio",
+    name: "일",
+    path: "/works",
   },
 ];
 
