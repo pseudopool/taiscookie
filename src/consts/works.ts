@@ -18,20 +18,20 @@ export const WORKS = [
     ],
     projects: [
       {
-        name: "리뷰 TF",
-        description: "리뷰 기능 개발",
-        url: "https://www.ktown4u.com/",
-        period: "2023.04 ~ 2023.05",
-      },
-      {
         name: "이벤트 TF",
-        description: "이벤트 댓글 기능 개발",
+        description: "이벤트 페이지 내 댓글 기능 개발",
         url: "https://www.ktown4u.com/",
         period: "2023.06 ~ 2023.07",
       },
       {
-        name: "페이지 전환 TF",
-        description: "레거시 프론트엔드 Next.js 전환",
+        name: "리뷰 TF",
+        description: "상세페이지 내 리뷰 탭 개발",
+        url: "https://www.ktown4u.com/",
+        period: "2023.04 ~ 2023.05",
+      },
+      {
+        name: "프레임워크 전환 TF",
+        description: "레거시 JSP 프론트엔드 Next.js 전환",
         url: "https://www.ktown4u.com/",
         period: "2023.01 ~ ",
       },
