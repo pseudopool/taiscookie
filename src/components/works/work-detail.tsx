@@ -21,6 +21,10 @@ export default WorkDetail;
 
 const workDetail = css`
   max-width: 800px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 2px dotted ${Theme.mainFontColor};
   h3 {
     font-weight: 500;
     color: ${Theme.mainFontColor};
