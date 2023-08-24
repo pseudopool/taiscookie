@@ -1,5 +1,7 @@
 import { css } from "@emotion/react";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { Theme } from "styles/Theme";
 
 const menus = [
   {
@@ -18,6 +20,9 @@ const menus = [
 ];
 
 export default function Navbar() {
+  const { pathname } = useRouter();
+  const activeMenu = menus.find((menu) => menu.path === pathname);
+
   return (
     <nav css={navbar}>
       <Link href="/">
@@ -25,7 +30,11 @@ export default function Navbar() {
       </Link>
       <menu>
         {menus.map((menu) => (
-          <li key={menu.name} className={menu.mobileDisplay}>
+          <li
+            css={menuItem(activeMenu === menu)}
+            key={menu.name}
+            className={menu.mobileDisplay}
+          >
             <Link key={menu.name} href={menu.path}>
               {menu.name}
             </Link>
@@ -48,7 +57,6 @@ const navbar = css`
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   box-shadow: 0 0 10px #00000010;
-
   h1 {
     font-weight: 600;
     color: #1a254b;
@@ -57,20 +65,23 @@ const navbar = css`
   menu {
     padding: 0;
     display: flex;
-    li {
-      list-style: none;
-      margin-right: 1.5rem;
-      cursor: pointer;
-      :hover {
-        color: transparent;
-        text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-      }
-    }
   }
   @media screen and (max-width: 480px) {
     font-size: 4vw;
     .none {
       display: none;
     }
+  }
+`;
+
+const menuItem = (isActive: boolean) => css`
+  list-style: none;
+  margin-right: 1.5rem;
+  color: ${Theme.mainFontColor};
+  font-weight: ${isActive ? 600 : 400};
+  cursor: pointer;
+  :hover {
+    color: transparent;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   }
 `;
