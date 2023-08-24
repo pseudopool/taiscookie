@@ -3,6 +3,7 @@ import React from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { addNavigationJsonLd } from "utils/addNavigationJsonLd";
+import { css } from "@emotion/react";
 
 export default function Layout({ children }: React.PropsWithChildren<{}>) {
   return (
@@ -21,8 +22,14 @@ export default function Layout({ children }: React.PropsWithChildren<{}>) {
         />
       </Head>
       <Navbar />
-      <main>{children}</main>
+      <main css={layout}>{children}</main>
       <Footer />
     </>
   );
 }
+
+const layout = css`
+  width: min(100%, 1000px);
+  margin-inline: auto;
+  padding-inline: 2rem;
+`;

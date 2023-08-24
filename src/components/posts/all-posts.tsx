@@ -49,7 +49,6 @@ const allposts = css`
   ul {
     max-width: 760px;
     width: 100%;
-    padding: 0 1rem;
   }
   span {
     font-weight: 500;

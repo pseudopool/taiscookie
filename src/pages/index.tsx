@@ -32,9 +32,6 @@ const Home: NextPage = () => {
 export default Home;
 
 const index = css`
-  width: min(100%, 1000px);
-  margin-inline: auto;
-  padding-inline: 3rem;
   display: grid;
   grid-template-columns: 45% 45%;
   grid-gap: 1.5rem;
