@@ -35,6 +35,9 @@ const workDetail = css`
   h3 {
     font-weight: 500;
     color: ${Theme.mainFontColor};
+    border-bottom: 1px solid #00000050;
+    padding-bottom: 0.5rem;
+    margin: 0 0 0.5rem 0;
   }
   span {
     display: block;
