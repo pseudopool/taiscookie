@@ -14,6 +14,15 @@ const WorkDetail = ({ work }: Props) => (
     <span>{work.role}</span>
     <desc>{work.description}</desc>
     <Tags tags={work.tech} />
+    <ul>
+      {work.projects.map((project) => (
+        <li key={project.name} css={projectDetail}>
+          <h4>{project.name}</h4>
+          <time>{project.period}</time>
+          <desc>{project.description}</desc>
+        </li>
+      ))}
+    </ul>
   </li>
 );
 
@@ -39,5 +48,28 @@ const workDetail = css`
   desc {
     font-size: 0.8rem;
     font-weight: 400;
+  }
+`;
+
+const projectDetail = css`
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #00000010;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  h4 {
+    color: ${Theme.mainFontColor};
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  time {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: #666;
+    margin-bottom: 0.5rem;
   }
 `;
