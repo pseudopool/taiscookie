@@ -12,7 +12,7 @@ function generateSiteMap(posts: Post[]) {
        <loc>https://taiscookie.vercel.app</loc>
      </url>
      <url>
-       <loc>https://taiscookie.vercel.app/portfolio</loc>
+       <loc>https://taiscookie.vercel.app/works</loc>
      </url>
      <url>
      <loc>https://taiscookie.vercel.app/posts</loc>

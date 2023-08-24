@@ -23,9 +23,9 @@ export const addNavigationJsonLd = () => {
           {
             '@type': 'SiteNavigationElement',
             position: 3,
-            name: 'Portfolio',
+            name: 'Works',
             description: 'The list of projects Tai has worked on.',
-            url: '${URL}/portfolio',
+            url: '${URL}/works',
           }
         ],
       }`,
