@@ -18,15 +18,17 @@ const tagList = css`
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 0.5rem 0.2rem;
+  gap: 0.8rem 0.3rem;
   margin: 1rem 0;
   li {
     span {
       display: inline;
-      padding: 0.3rem 0.5rem;
+      padding: 0.4rem 0.7rem;
       border-radius: 1rem;
       background-color: ${Theme.mainFontColor};
-      font-size: 0.7rem;
+      font-family: "Courier";
+      font-size: 0.8rem;
+      font-weight: 500;
       color: white;
     }
   }
