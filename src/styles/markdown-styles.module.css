@@ -1,5 +1,6 @@
 .markdown {
-  line-height: 1.5rem;
+  line-height: 1.7rem;
+  font-size: 1.1rem;
 }
 
 .markdown h1 {
@@ -7,14 +8,17 @@
 }
 
 .markdown h2 {
-  font-weight: 400;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 1.5rem;
   color: rgb(0, 0, 127);
   border-bottom: 1px solid #00000020;
   padding-bottom: 0.5rem;
 }
 
-.markdown h3,
+.markdown h3 {
+  font-weight: 500;
+}
+
 .markdown p {
   font-weight: 300;
 }
@@ -35,7 +39,8 @@
 
 .markdown code {
   font-family: courier, monospace;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  font-weight: 500;
   border-radius: 0.5rem;
 }
 
