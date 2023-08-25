@@ -11,23 +11,23 @@ export const addNavigationJsonLd = () => {
             "position": 1,
             "name": "Home",
             "description": "Tai is a software engineer based in Seoul.",
-            "url": "${URL}",
+            "url": "${URL}"
           },
           {
             "@type": "SiteNavigationElement",
             "position": 2,
             "name": "Posts",
             "description": "Posts about software engineering, life, and more.",
-            "url": "${URL}/posts",
+            "url": "${URL}/posts"
           },
           {
             "@type": "SiteNavigationElement",
             "position": 3,
             "name": "Works",
             "description": "The list of projects Tai has worked on.",
-            "url": "${URL}/works",
+            "url": "${URL}/works"
           }
-        ],
+        ]
       }`,
   };
 };
