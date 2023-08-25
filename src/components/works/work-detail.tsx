@@ -14,7 +14,7 @@ const WorkDetail = ({ work }: Props) => (
   <li key={work.name} css={workDetail}>
     <h3>{work.name}</h3>
     <span>{work.role}</span>
-    <desc>{work.description}</desc>
+    <p>{work.description}</p>
     <Tags tags={work.tech} />
     <ul>
       {work.projects.map((project) => (
@@ -33,7 +33,8 @@ const workDetail = css`
   border-radius: 1rem;
   border: 2px dotted ${Theme.mainFontColor};
   h3 {
-    font-weight: 500;
+    font-size: 1.5rem;
+    font-weight: 600;
     color: ${Theme.mainFontColor};
     border-bottom: 1px solid #00000050;
     padding-bottom: 0.5rem;
@@ -41,13 +42,12 @@ const workDetail = css`
   }
   span {
     display: block;
-    font-size: 0.8rem;
     font-weight: 300;
     margin-bottom: 0.5rem;
     color: #666;
   }
-  desc {
-    font-size: 0.8rem;
+  p {
+    line-height: 1.5rem;
     font-weight: 400;
   }
 `;

@@ -12,6 +12,6 @@ export type Work = {
 export type Project = {
   name: string;
   description: string;
-  url: string;
   period: string;
+  features: string[];
 };
