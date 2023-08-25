@@ -106,6 +106,7 @@ export async function getStaticProps({ params: { id } }: Params) {
         content,
       },
     },
+    revalidate: 60 * 60 * 24,
   };
 }
 
