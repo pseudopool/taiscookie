@@ -11,7 +11,7 @@ export const addNavigationJsonLd = () => {
             "position": 1,
             "name": "Home",
             "description": "Tai is a software engineer based in Seoul.",
-            "url": ${URL},
+            "url": "${URL}",
           },
           {
             "@type": "SiteNavigationElement",
