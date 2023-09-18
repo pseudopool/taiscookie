@@ -7,7 +7,7 @@
     <list default="true" id="f6c9d501-69e5-481d-8d1e-a9519ce0adc1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../klimt/src/components/Review/Comments/CommentCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../klimt/src/components/Review/Comments/CommentCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../klimt/src/pages/eventsub/components/CommentSection.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../klimt/src/pages/eventsub/components/CommentSection.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/markdown-styles.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/markdown-styles.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1695019482021</updated>
-      <workItem from="1695019483029" duration="990000" />
+      <workItem from="1695019483029" duration="1166000" />
     </task>
     <servers />
   </component>
