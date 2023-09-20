@@ -78,6 +78,7 @@ export async function getStaticProps({ params: { id } }: Params) {
         ogImage: res.properties.coverImage.files[0].file.url,
         coverImage: res.properties.coverImage.files[0].file.url,
         excerpt: res.properties.excerpt.rich_text[0].plain_text,
+        backgroundColor: res.properties.backgroundColor.rich_text[0].plain_text,
       };
     });
 

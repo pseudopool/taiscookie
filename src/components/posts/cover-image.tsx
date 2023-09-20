@@ -8,11 +8,23 @@ type Props = {
   src: string;
   blurDataURL: string;
   id?: string;
+  backgroundColor: string;
 };
 
-const CoverImage = ({ title, src, blurDataURL, id }: Props) => {
+const CoverImage = ({
+  title,
+  src,
+  backgroundColor,
+  blurDataURL,
+  id,
+}: Props) => {
   const image = (
-    <div css={img}>
+    <div
+      css={img}
+      style={{
+        backgroundColor,
+      }}
+    >
       <Image
         src={src}
         width={100}
@@ -20,6 +32,9 @@ const CoverImage = ({ title, src, blurDataURL, id }: Props) => {
         alt={`Cover Image for ${title}`}
         placeholder="blur"
         blurDataURL={blurDataURL}
+        onError={(e) => {
+          e.currentTarget.src = "assets/placeholder.png";
+        }}
       />
     </div>
   );

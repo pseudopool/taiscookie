@@ -10,6 +10,7 @@ type Props = {
   date: string;
   excerpt: string;
   id: string;
+  backgroundColor: string;
 };
 
 const PostPreview = ({
@@ -19,6 +20,7 @@ const PostPreview = ({
   date,
   excerpt,
   id,
+  backgroundColor,
 }: Props) => {
   return (
     <li css={preview}>
@@ -34,6 +36,7 @@ const PostPreview = ({
         title={title}
         src={coverImage}
         blurDataURL={blurDataURL}
+        backgroundColor={backgroundColor}
       />
     </li>
   );

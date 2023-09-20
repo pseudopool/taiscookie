@@ -27,6 +27,7 @@ const AllPosts = ({ posts }: Props) => {
             date={post.date}
             id={post.id}
             excerpt={post.excerpt}
+            backgroundColor={post.backgroundColor}
           />
         ))}
       </ul>
