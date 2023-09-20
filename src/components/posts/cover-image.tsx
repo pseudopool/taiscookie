@@ -57,6 +57,9 @@ const img = css`
   margin-left: 1rem;
   border-radius: 0.5rem;
   overflow: hidden;
+  img {
+    object-fit: cover;
+  }
 `;
 
 export default CoverImage;
