@@ -5,15 +5,15 @@ const fetchPosts = async () => {
       {
         headers: {
           Authorization: `Bearer ${process.env.NEXT_PUBLIC_NOTION_API_KEY}`,
-          "Notion-Version": "2022-06-28",
-          "Content-Type": "application/json",
+          'Notion-Version': '2022-06-28',
+          'Content-Type': 'application/json',
         },
-        method: "POST",
+        method: 'POST',
         body: JSON.stringify({
           sorts: [
             {
-              property: "date",
-              direction: "descending",
+              property: 'date',
+              direction: 'descending',
             },
           ],
         }),

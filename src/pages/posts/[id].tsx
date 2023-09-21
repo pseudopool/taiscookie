@@ -1,20 +1,20 @@
-import { useRouter } from "next/router";
-import markdownToHtml from "utils/markdownToHtml";
-import Head from "next/head";
-import ErrorPage from "next/error";
-import PostTitle from "components/posts/post-title";
-import PostBody from "components/posts/post-body";
-import type { Post } from "interfaces/post";
-import { getPlaiceholder } from "plaiceholder";
-import fetchPosts from "apis/fetchPosts";
-import { URL } from "consts/url";
+import {useRouter} from 'next/router';
+import markdownToHtml from 'utils/markdownToHtml';
+import Head from 'next/head';
+import ErrorPage from 'next/error';
+import PostTitle from 'components/posts/post-title';
+import PostBody from 'components/posts/post-body';
+import type {Post} from 'interfaces/post';
+import {getPlaiceholder} from 'plaiceholder';
+import fetchPosts from 'apis/fetchPosts';
+import {URL} from 'consts/url';
 
 type Props = {
   post: Post;
   preview?: boolean;
 };
 
-export default function Post({ post }: Props) {
+export default function Post({post}: Props) {
   const router = useRouter();
 
   if (!router.isFallback && !post?.id) {
@@ -24,14 +24,14 @@ export default function Post({ post }: Props) {
   return (
     <>
       {router.isFallback ? (
-        ""
+        ''
       ) : (
         <article>
           <Head>
             <title>{post.title} | 타이의 쿠키</title>
             <link
               rel="canonical"
-              href={URL + "/posts/" + post.id}
+              href={URL + '/posts/' + post.id}
               key="canonical"
             />
             <meta name="description" content={post.excerpt} />
@@ -58,18 +58,18 @@ type Params = {
   };
 };
 
-export async function getStaticProps({ params: { id } }: Params) {
+export async function getStaticProps({params: {id}}: Params) {
   const post = await (
     await fetch(`https://api.notion.com/v1/pages/${id}`, {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_NOTION_API_KEY}`,
-        "Notion-Version": "2021-05-13",
+        'Notion-Version': '2021-05-13',
       },
-      method: "GET",
+      method: 'GET',
     })
   )
     .json()
-    .then((res) => {
+    .then(res => {
       return {
         title: res.properties.title.title[0].plain_text,
         date: res.properties.date.date.start,
@@ -86,17 +86,17 @@ export async function getStaticProps({ params: { id } }: Params) {
     await fetch(`https://api.notion.com/v1/blocks/${id}/children`, {
       headers: {
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_NOTION_API_KEY}`,
-        "Notion-Version": "2021-05-13",
+        'Notion-Version': '2021-05-13',
       },
-      method: "GET",
+      method: 'GET',
     })
   )
     .json()
-    .then((res) => res.results[0].code.text[0].plain_text);
-  const content = await markdownToHtml(markdown || "");
+    .then(res => res.results[0].code.text[0].plain_text);
+  const content = await markdownToHtml(markdown || '');
 
   const blurDataURL = await getPlaiceholder(post.coverImage).then(
-    (res) => res.base64
+    res => res.base64
   );
 
   return {
@@ -112,7 +112,7 @@ export async function getStaticProps({ params: { id } }: Params) {
 }
 
 export async function getStaticPaths() {
-  const posts = await fetchPosts().then((res) =>
+  const posts = await fetchPosts().then(res =>
     res.results.map((post: any) => {
       return {
         id: post.id,
@@ -128,6 +128,6 @@ export async function getStaticPaths() {
         },
       };
     }),
-    fallback: "blocking",
+    fallback: 'blocking',
   };
 }

@@ -1,27 +1,27 @@
-import { css } from "@emotion/react";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { Theme } from "styles/Theme";
+import {css} from '@emotion/react';
+import Link from 'next/link';
+import {useRouter} from 'next/router';
+import {Theme} from 'styles/Theme';
 
 const menus = [
   {
-    name: "홈",
-    path: "/",
-    mobileDisplay: "none",
+    name: '홈',
+    path: '/',
+    mobileDisplay: 'none',
   },
   {
-    name: "포스트",
-    path: "/posts",
+    name: '포스트',
+    path: '/posts',
   },
   {
-    name: "일",
-    path: "/works",
+    name: '일',
+    path: '/works',
   },
 ];
 
 export default function Navbar() {
-  const { pathname } = useRouter();
-  const activeMenu = menus.find((menu) => menu.path === pathname);
+  const {pathname} = useRouter();
+  const activeMenu = menus.find(menu => menu.path === pathname);
 
   return (
     <nav css={navbar}>
@@ -29,7 +29,7 @@ export default function Navbar() {
         <h1>🍪 타이의 쿠키</h1>
       </Link>
       <menu>
-        {menus.map((menu) => (
+        {menus.map(menu => (
           <li
             css={menuItem(activeMenu === menu)}
             key={menu.name}

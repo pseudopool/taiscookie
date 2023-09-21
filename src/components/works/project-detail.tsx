@@ -1,19 +1,19 @@
-import { css } from "@emotion/react";
+import {css} from '@emotion/react';
 
-import { Project } from "interfaces/work";
-import { Theme } from "styles/Theme";
+import {Project} from 'interfaces/work';
+import {Theme} from 'styles/Theme';
 
 type Props = {
   project: Project;
 };
 
-const Project = ({ project }: Props) => (
+const Project = ({project}: Props) => (
   <li key={project.name} css={projectDetail}>
     <h4>{project.name}</h4>
     <p>{project.description}</p>
     <time>{project.period}</time>
     <ul>
-      {project.features.map((feature) => (
+      {project.features.map(feature => (
         <li key={feature}>
           <span>* </span>
           {feature}

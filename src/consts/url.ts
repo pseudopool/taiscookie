@@ -1,1 +1,1 @@
-export const URL = "https://taiscookie.vercel.app";
+export const URL = 'https://taiscookie.vercel.app';

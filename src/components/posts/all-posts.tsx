@@ -1,13 +1,13 @@
-import PostPreview from "./post-preview";
-import type { Post } from "interfaces/post";
-import { css } from "@emotion/react";
-import { Theme } from "styles/Theme";
+import PostPreview from './post-preview';
+import type {Post} from 'interfaces/post';
+import {css} from '@emotion/react';
+import {Theme} from 'styles/Theme';
 
 type Props = {
   posts: Post[];
 };
 
-const AllPosts = ({ posts }: Props) => {
+const AllPosts = ({posts}: Props) => {
   return (
     <section css={allposts}>
       <h2>
@@ -18,7 +18,7 @@ const AllPosts = ({ posts }: Props) => {
           padding: 0;
         `}
       >
-        {posts.map((post) => (
+        {posts.map(post => (
           <PostPreview
             key={post.id}
             title={post.title}

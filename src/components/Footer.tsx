@@ -1,6 +1,6 @@
-import { css } from "@emotion/react";
-import { Icon } from "@iconify/react";
-import Link from "next/link";
+import {css} from '@emotion/react';
+import {Icon} from '@iconify/react';
+import Link from 'next/link';
 
 export default function Footer() {
   return (

@@ -1,4 +1,4 @@
-import { URL } from "consts/url";
+import {URL} from 'consts/url';
 
 export const addNavigationJsonLd = () => {
   return {

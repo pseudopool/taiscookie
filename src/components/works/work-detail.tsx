@@ -1,23 +1,23 @@
-import { css } from "@emotion/react";
+import {css} from '@emotion/react';
 
-import Tags from "components/Tags";
-import type { Work } from "interfaces/work";
-import { Theme } from "styles/Theme";
+import Tags from 'components/Tags';
+import type {Work} from 'interfaces/work';
+import {Theme} from 'styles/Theme';
 
-import Project from "./project-detail";
+import Project from './project-detail';
 
 type Props = {
   work: Work;
 };
 
-const WorkDetail = ({ work }: Props) => (
+const WorkDetail = ({work}: Props) => (
   <li key={work.name} css={workDetail}>
     <h3>{work.name}</h3>
     <span>{work.role}</span>
     <p>{work.description}</p>
     <Tags tags={work.tech} />
     <ul>
-      {work.projects.map((project) => (
+      {work.projects.map(project => (
         <Project project={project} key={project.name} />
       ))}
     </ul>

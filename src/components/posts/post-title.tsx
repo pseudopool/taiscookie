@@ -1,6 +1,6 @@
-import { css } from "@emotion/react";
-import DateFormatter from "./date-formatter";
-import Image from "next/image";
+import {css} from '@emotion/react';
+import DateFormatter from './date-formatter';
+import Image from 'next/image';
 
 type Props = {
   title: string;
@@ -9,7 +9,7 @@ type Props = {
   blurDataURL: string;
 };
 
-const PostTitle = ({ title, date, img, blurDataURL }: Props) => {
+const PostTitle = ({title, date, img, blurDataURL}: Props) => {
   return (
     <div css={posttitle}>
       <Image

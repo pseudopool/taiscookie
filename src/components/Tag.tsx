@@ -1,4 +1,4 @@
-const Tag = ({ tag }: { tag: string }) => (
+const Tag = ({tag}: {tag: string}) => (
   <li>
     <span>{tag}</span>
   </li>

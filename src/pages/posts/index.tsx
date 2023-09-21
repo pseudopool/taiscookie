@@ -1,17 +1,17 @@
-import Head from "next/head";
+import Head from 'next/head';
 
-import { getPlaiceholder } from "plaiceholder";
+import {getPlaiceholder} from 'plaiceholder';
 
-import fetchPosts from "apis/fetchPosts";
-import AllPosts from "components/posts/all-posts";
-import type { Post } from "interfaces/post";
-import { formatNotionPost } from "utils/formatNotionPost";
+import fetchPosts from 'apis/fetchPosts';
+import AllPosts from 'components/posts/all-posts';
+import type {Post} from 'interfaces/post';
+import {formatNotionPost} from 'utils/formatNotionPost';
 
 type Props = {
   allPosts: Post[];
 };
 
-export default function Index({ allPosts }: Props) {
+export default function Index({allPosts}: Props) {
   return (
     <>
       <Head>
@@ -24,19 +24,19 @@ export default function Index({ allPosts }: Props) {
 
 export const getStaticProps = async () => {
   // get posts from notion database
-  const allPosts = await fetchPosts().then((res) =>
+  const allPosts = await fetchPosts().then(res =>
     res.results.map((post: any) => formatNotionPost(post))
   );
 
   const allPostsWithBlurData = await Promise.all(
     allPosts.map(async (post: Post) => {
-      const { base64 } = await getPlaiceholder(post.coverImage);
-      return { ...post, blurDataURL: base64 };
+      const {base64} = await getPlaiceholder(post.coverImage);
+      return {...post, blurDataURL: base64};
     })
   );
 
   return {
-    props: { allPosts: allPostsWithBlurData },
+    props: {allPosts: allPostsWithBlurData},
     revalidate: 10,
   };
 };

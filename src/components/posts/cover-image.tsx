@@ -1,7 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
-import { css } from "@emotion/react";
-import Image from "next/image";
+import Link from 'next/link';
+import {css} from '@emotion/react';
+import Image from 'next/image';
 
 type Props = {
   title: string;
@@ -11,13 +10,7 @@ type Props = {
   backgroundColor: string;
 };
 
-const CoverImage = ({
-  title,
-  src,
-  backgroundColor,
-  blurDataURL,
-  id,
-}: Props) => {
+const CoverImage = ({title, src, backgroundColor, blurDataURL, id}: Props) => {
   const image = (
     <div
       css={img}
@@ -32,8 +25,8 @@ const CoverImage = ({
         alt={`Cover Image for ${title}`}
         placeholder="blur"
         blurDataURL={blurDataURL}
-        onError={(e) => {
-          e.currentTarget.src = "assets/placeholder.png";
+        onError={e => {
+          e.currentTarget.src = 'assets/placeholder.png';
         }}
       />
     </div>

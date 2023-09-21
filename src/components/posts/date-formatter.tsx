@@ -1,11 +1,11 @@
-import { css } from "@emotion/react";
-import { parseISO, format } from "date-fns";
+import {css} from '@emotion/react';
+import {parseISO, format} from 'date-fns';
 
 type Props = {
   dateString: string;
 };
 
-const DateFormatter = ({ dateString }: Props) => {
+const DateFormatter = ({dateString}: Props) => {
   const date = parseISO(dateString);
   return (
     <time
@@ -15,7 +15,7 @@ const DateFormatter = ({ dateString }: Props) => {
         font-weight: 100;
       `}
     >
-      {format(date, "LLLL	d, yyyy")}
+      {format(date, 'LLLL	d, yyyy')}
     </time>
   );
 };

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f27dc04c-1de0-41e7-ba37-f57a0bd4f65d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apis/fetchPosts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/apis/fetchPosts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tag.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tag.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Tags.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Tags.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/all-posts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/all-posts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/cover-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/cover-image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/date-formatter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/date-formatter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/post-body.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/post-body.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/post-preview.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/post-preview.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/posts/post-title.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/posts/post-title.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/works/project-detail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/works/project-detail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/works/work-detail.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/works/work-detail.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/consts/url.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/consts/url.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/consts/works.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/consts/works.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/posts/[id].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/[id].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/posts/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/posts/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/sitemap.xml.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/sitemap.xml.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/works/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/works/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Theme.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Theme.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/addNavigationJsonLd.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/addNavigationJsonLd.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/markdownToHtml.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/markdownToHtml.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "main",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "prettierjs.PrettierConfiguration.Package": "/Users/songsong-i/Desktop/taiscookie/node_modules/prettier",
+    "ts.external.directory.path": "/Users/songsong-i/Desktop/taiscookie/node_modules/typescript/lib"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>

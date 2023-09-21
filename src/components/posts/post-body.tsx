@@ -1,13 +1,13 @@
-import { css } from "@emotion/react";
-import { useEffect } from "react";
+import {css} from '@emotion/react';
+import {useEffect} from 'react';
 
-import "highlight.js/styles/atom-one-dark.css";
-import hljs from "highlight.js/lib/core";
-import javascript from "highlight.js/lib/languages/javascript";
+import 'highlight.js/styles/atom-one-dark.css';
+import hljs from 'highlight.js/lib/core';
+import javascript from 'highlight.js/lib/languages/javascript';
 
-import markdownStyles from "styles/markdown-styles.module.css";
+import markdownStyles from 'styles/markdown-styles.module.css';
 
-hljs.registerLanguage("javascript", javascript);
+hljs.registerLanguage('javascript', javascript);
 
 type Props = {
   content: string;
@@ -25,10 +25,10 @@ const postbody = css`
   }
 `;
 
-const PostBody = ({ content }: Props) => {
+const PostBody = ({content}: Props) => {
   useEffect(() => {
-    const codeBlocks = document.querySelectorAll("code");
-    codeBlocks.forEach((codeBlock) => {
+    const codeBlocks = document.querySelectorAll('code');
+    codeBlocks.forEach(codeBlock => {
       hljs.highlightElement(codeBlock);
     });
   }, []);
@@ -37,8 +37,8 @@ const PostBody = ({ content }: Props) => {
     <div css={postbody}>
       <div
         id="markdown"
-        className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
+        className={markdownStyles['markdown']}
+        dangerouslySetInnerHTML={{__html: content}}
       />
     </div>
   );

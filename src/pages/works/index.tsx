@@ -1,14 +1,14 @@
-import { css } from "@emotion/react";
+import {css} from '@emotion/react';
 
-import WorkDetail from "components/works/work-detail";
-import { WORKS } from "consts/works";
+import WorkDetail from 'components/works/work-detail';
+import {WORKS} from 'consts/works';
 
 const Works = () => {
   return (
     <section css={works}>
       <h2>works</h2>
       <ul>
-        {WORKS.map((work) => (
+        {WORKS.map(work => (
           <WorkDetail key={work.name} work={work} />
         ))}
       </ul>

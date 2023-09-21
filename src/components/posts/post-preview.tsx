@@ -1,7 +1,7 @@
-import DateFormatter from "./date-formatter";
-import CoverImage from "./cover-image";
-import Link from "next/link";
-import { css } from "@emotion/react";
+import DateFormatter from './date-formatter';
+import CoverImage from './cover-image';
+import Link from 'next/link';
+import {css} from '@emotion/react';
 
 type Props = {
   title: string;

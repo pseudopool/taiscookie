@@ -1,11 +1,11 @@
-import Head from "next/head";
-import React from "react";
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import { addNavigationJsonLd } from "utils/addNavigationJsonLd";
-import { css } from "@emotion/react";
+import Head from 'next/head';
+import React from 'react';
+import Footer from './Footer';
+import Navbar from './Navbar';
+import {addNavigationJsonLd} from 'utils/addNavigationJsonLd';
+import {css} from '@emotion/react';
 
-export default function Layout({ children }: React.PropsWithChildren<{}>) {
+export default function Layout({children}: React.PropsWithChildren<{}>) {
   return (
     <>
       <Head>
