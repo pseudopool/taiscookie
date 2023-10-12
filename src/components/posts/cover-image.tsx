@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {css} from '@emotion/react';
 import Image from 'next/image';
 
@@ -6,53 +5,46 @@ type Props = {
   title: string;
   src: string;
   blurDataURL: string;
-  id?: string;
-  backgroundColor: string;
 };
 
-const CoverImage = ({title, src, backgroundColor, blurDataURL, id}: Props) => {
-  const image = (
-    <div
-      css={img}
-      style={{
-        backgroundColor,
-      }}
-    >
+const CoverImage = ({title, src, blurDataURL}: Props) => {
+  return (
+    <div css={coverImage}>
       <Image
         src={src}
-        width={100}
-        height={100}
+        width={1000}
+        height={500}
         alt={`Cover Image for ${title}`}
         placeholder="blur"
         blurDataURL={blurDataURL}
-        onError={e => {
-          e.currentTarget.src = 'assets/placeholder.png';
-        }}
+        css={css`
+          object-fit: cover;
+          border-radius: 1rem;
+          height: 200px;
+          width: 100%;
+        `}
       />
     </div>
   );
-  return (
-    <>
-      {id ? (
-        <Link as={`/posts/${id}`} href="/posts/[id]" aria-label={title}>
-          {image}
-        </Link>
-      ) : (
-        image
-      )}
-    </>
-  );
 };
 
-const img = css`
-  width: 100px;
-  height: 100px;
-  margin-left: 1rem;
-  border-radius: 0.5rem;
-  overflow: hidden;
+export default CoverImage;
+
+const coverImage = css`
+  width: 100%;
+  margin-bottom: 1rem;
   img {
     object-fit: cover;
+    border-radius: 1rem;
+    height: 200px;
+    width: 100%;
+  }
+  @media (min-width: 700px) {
+    width: 240px;
+    height: 240px;
+    img {
+      width: 240px;
+      height: 240px;
+    }
   }
 `;
-
-export default CoverImage;

@@ -13,11 +13,7 @@ const AllPosts = ({posts}: Props) => {
       <h2>
         <span>{posts.length}</span> posts
       </h2>
-      <ul
-        css={css`
-          padding: 0;
-        `}
-      >
+      <ul>
         {posts.map(post => (
           <PostPreview
             key={post.id}
@@ -27,7 +23,6 @@ const AllPosts = ({posts}: Props) => {
             date={post.date}
             id={post.id}
             excerpt={post.excerpt}
-            backgroundColor={post.backgroundColor}
           />
         ))}
       </ul>
@@ -41,6 +36,8 @@ const allposts = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  margin: 1rem;
   h2 {
     font-family: Courier;
     text-align: center;
@@ -48,11 +45,17 @@ const allposts = css`
     font-size: 1.2rem;
   }
   ul {
-    max-width: 760px;
     width: 100%;
+    padding: 0 1rem;
+    margin: 0;
   }
   span {
     font-weight: 500;
     color: ${Theme.mainFontColor};
+  }
+  @media screen and (min-width: 700px) {
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 `;

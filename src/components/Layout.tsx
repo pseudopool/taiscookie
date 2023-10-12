@@ -31,5 +31,4 @@ export default function Layout({children}: React.PropsWithChildren<{}>) {
 const layout = css`
   width: min(100%, 1000px);
   margin-inline: auto;
-  padding-inline: 2rem;
 `;

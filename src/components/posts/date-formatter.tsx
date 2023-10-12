@@ -1,5 +1,6 @@
 import {css} from '@emotion/react';
 import {parseISO, format} from 'date-fns';
+import {Theme} from '../../styles/Theme';
 
 type Props = {
   dateString: string;
@@ -11,8 +12,9 @@ const DateFormatter = ({dateString}: Props) => {
     <time
       dateTime={dateString}
       css={css`
-        font-size: 0.8rem;
-        font-weight: 100;
+        color: ${Theme.textGray};
+        font-weight: 300;
+        font-size: small;
       `}
     >
       {format(date, 'LLLL	d, yyyy')}

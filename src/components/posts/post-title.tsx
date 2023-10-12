@@ -16,7 +16,7 @@ const PostTitle = ({title, date, img, blurDataURL}: Props) => {
         src={img}
         alt={title}
         width={800}
-        height={200}
+        height={400}
         placeholder="blur"
         blurDataURL={blurDataURL}
       />
@@ -34,9 +34,11 @@ const posttitle = css`
   align-items: center;
   img {
     object-fit: cover;
-    height: 200px;
     width: 100%;
+    height: 100%;
     max-width: 50rem;
+    border-radius: 1rem;
+    margin: 1rem;
   }
   h1 {
     font-weight: 500;

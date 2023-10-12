@@ -5,6 +5,5 @@ export const formatNotionPost = (post: any) => {
     id: post.id,
     url: post.url,
     excerpt: post.properties.excerpt.rich_text[0].plain_text,
-    backgroundColor: post.properties.backgroundColor.rich_text[0].plain_text,
   };
 };

@@ -2,6 +2,7 @@ import DateFormatter from './date-formatter';
 import CoverImage from './cover-image';
 import Link from 'next/link';
 import {css} from '@emotion/react';
+import {Theme} from '../../styles/Theme';
 
 type Props = {
   title: string;
@@ -10,7 +11,6 @@ type Props = {
   date: string;
   excerpt: string;
   id: string;
-  backgroundColor: string;
 };
 
 const PostPreview = ({
@@ -20,24 +20,16 @@ const PostPreview = ({
   date,
   excerpt,
   id,
-  backgroundColor,
 }: Props) => {
   return (
     <li css={preview}>
-      <div className="post-des">
-        <Link as={`/posts/${id}`} href="/posts/[id]">
+      <Link as={`/posts/${id}`} href="/posts/[id]">
+        <CoverImage title={title} src={coverImage} blurDataURL={blurDataURL} />
+        <div>
           <h3 className="hover:underline">{title}</h3>
-        </Link>
-        <DateFormatter dateString={date} />
-        <p>{excerpt}</p>
-      </div>
-      <CoverImage
-        id={id}
-        title={title}
-        src={coverImage}
-        blurDataURL={blurDataURL}
-        backgroundColor={backgroundColor}
-      />
+          <p>{excerpt}</p> <DateFormatter dateString={date} />
+        </div>
+      </Link>
     </li>
   );
 };
@@ -45,20 +37,45 @@ const PostPreview = ({
 export default PostPreview;
 
 const preview = css`
-  border-bottom: 1px solid #00000020;
-  padding: 0.5rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4rem;
+  cursor: pointer;
   h3 {
-    margin: 0 0 0.1rem 0;
+    margin: 0 0 0.5rem 0;
+    font-size: x-large;
     font-weight: 500;
+    line-height: 1.5;
   }
   p {
-    margin: 0.5rem 0 0 0;
-    color: #00000070;
-    font-size: 0.9rem;
-    font-weight: 300;
-    line-height: 1.5rem;
+    font-size: medium;
+    color: ${Theme.textGray};
+    line-height: 1.5;
+    margin: 0 0 1rem 0;
+  }
+  &:hover {
+    img {
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 10px 20px #00000010;
+      transform: translateY(-5px);
+    }
+    h3 {
+      transition: all 0.2s ease-in-out;
+      color: ${Theme.mainFontColor};
+    }
+  }
+  @media screen and (min-width: 700px) {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      h3 {
+        font-size: xx-large;
+      }
+      p {
+        font-size: large;
+      }
+    }
   }
 `;
