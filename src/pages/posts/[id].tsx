@@ -8,6 +8,7 @@ import type {Post} from 'interfaces/post';
 import {getPlaiceholder} from 'plaiceholder';
 import fetchPosts from 'apis/fetchPosts';
 import {URL} from 'consts/url';
+import fetchRandomImage from '../../apis/fetchRandomImage';
 
 type Props = {
   post: Post;
@@ -59,6 +60,8 @@ type Params = {
 };
 
 export async function getStaticProps({params: {id}}: Params) {
+  const randomImageFromUnsplash = await fetchRandomImage();
+
   const post = await (
     await fetch(`https://api.notion.com/v1/pages/${id}`, {
       headers: {
@@ -75,8 +78,8 @@ export async function getStaticProps({params: {id}}: Params) {
         date: res.properties.date.date.start,
         id: res.id,
         url: res.url,
-        ogImage: res.properties.coverImage.files[0].file.url,
-        coverImage: res.properties.coverImage.files[0].file.url,
+        ogImage: randomImageFromUnsplash[0].urls.thumb,
+        coverImage: randomImageFromUnsplash[0].urls.regular,
         excerpt: res.properties.excerpt.rich_text[0].plain_text,
         backgroundColor: res.properties.backgroundColor.rich_text[0].plain_text,
       };

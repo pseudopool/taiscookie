@@ -4,7 +4,6 @@ export const formatNotionPost = (post: any) => {
     date: post.properties.date.date.start,
     id: post.id,
     url: post.url,
-    coverImage: post.properties.coverImage.files[0].file.url,
     excerpt: post.properties.excerpt.rich_text[0].plain_text,
     backgroundColor: post.properties.backgroundColor.rich_text[0].plain_text,
   };

@@ -6,6 +6,7 @@ import fetchPosts from 'apis/fetchPosts';
 import AllPosts from 'components/posts/all-posts';
 import type {Post} from 'interfaces/post';
 import {formatNotionPost} from 'utils/formatNotionPost';
+import fetchRandomImage from '../../apis/fetchRandomImage';
 
 type Props = {
   allPosts: Post[];
@@ -28,10 +29,18 @@ export const getStaticProps = async () => {
     res.results.map((post: any) => formatNotionPost(post))
   );
 
+  const randomCoverImages = await fetchRandomImage(allPosts.length);
+
   const allPostsWithBlurData = await Promise.all(
-    allPosts.map(async (post: Post) => {
-      const {base64} = await getPlaiceholder(post.coverImage);
-      return {...post, blurDataURL: base64};
+    allPosts.map(async (post: Post, index: number) => {
+      const coverImage = randomCoverImages[index].urls.regular || '';
+      const {base64} = await getPlaiceholder(coverImage);
+
+      return {
+        ...post,
+        coverImage,
+        blurDataURL: base64,
+      };
     })
   );
 
