@@ -27,7 +27,7 @@ export default function Navbar() {
   return (
     <nav css={navbar}>
       <Link href="/">
-        <Typography variant="h1">🍪 타이의 쿠키</Typography>
+        <h1>🍪 타이의 쿠키</h1>
       </Link>
       <menu>
         {menus.map(menu => (
