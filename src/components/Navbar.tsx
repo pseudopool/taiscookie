@@ -2,6 +2,7 @@ import {css} from '@emotion/react';
 import Link from 'next/link';
 import {useRouter} from 'next/router';
 import {Theme} from 'styles/Theme';
+import Typography from './Typography';
 
 const menus = [
   {
@@ -26,7 +27,7 @@ export default function Navbar() {
   return (
     <nav css={navbar}>
       <Link href="/">
-        <h1>🍪 타이의 쿠키</h1>
+        <Typography variant="h1">🍪 타이의 쿠키</Typography>
       </Link>
       <menu>
         {menus.map(menu => (
@@ -36,7 +37,7 @@ export default function Navbar() {
             className={menu.mobileDisplay}
           >
             <Link key={menu.name} href={menu.path}>
-              {menu.name}
+              <Typography>{menu.name}</Typography>
             </Link>
           </li>
         ))}
@@ -48,7 +49,6 @@ export default function Navbar() {
 const navbar = css`
   position: fixed;
   width: 100%;
-  height: 70px;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -66,8 +66,7 @@ const navbar = css`
     padding: 0;
     display: flex;
   }
-  @media screen and (max-width: 480px) {
-    font-size: 4vw;
+  @media screen and (max-width: 700px) {
     .none {
       display: none;
     }

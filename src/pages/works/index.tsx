@@ -2,11 +2,12 @@ import {css} from '@emotion/react';
 
 import WorkDetail from 'components/works/work-detail';
 import {WORKS} from 'consts/works';
+import Typography from 'components/Typography';
 
 const Works = () => {
   return (
     <section css={works}>
-      <h2>works</h2>
+      <Typography variant="h2">works</Typography>
       <ul>
         {WORKS.map(work => (
           <WorkDetail key={work.name} work={work} />
@@ -24,8 +25,6 @@ const works = css`
   h2 {
     font-family: Courier;
     text-align: center;
-    font-weight: 300;
-    font-size: 1.2rem;
   }
   ul {
     padding: 0;
