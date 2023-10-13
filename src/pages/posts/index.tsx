@@ -46,6 +46,5 @@ export const getStaticProps = async () => {
 
   return {
     props: {allPosts: allPostsWithBlurData},
-    revalidate: 10,
   };
 };
