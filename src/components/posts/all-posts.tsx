@@ -43,6 +43,7 @@ const allposts = css`
     text-align: center;
     font-weight: 300;
     font-size: 1.2rem;
+    margin-bottom: 2rem;
   }
   ul {
     width: 100%;

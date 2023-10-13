@@ -12,14 +12,16 @@ type Props = {
 const PostTitle = ({title, date, img, blurDataURL}: Props) => {
   return (
     <div css={posttitle}>
-      <Image
-        src={img}
-        alt={title}
-        width={800}
-        height={400}
-        placeholder="blur"
-        blurDataURL={blurDataURL}
-      />
+      <div>
+        <Image
+          src={img}
+          alt={title}
+          width={800}
+          height={400}
+          placeholder="blur"
+          blurDataURL={blurDataURL}
+        />
+      </div>
       <h1>{title}</h1>
       <DateFormatter dateString={date} />
     </div>
@@ -32,13 +34,15 @@ const posttitle = css`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
   img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
-    max-width: 50rem;
-    border-radius: 1rem;
-    margin: 1rem;
   }
   h1 {
     font-weight: 500;
