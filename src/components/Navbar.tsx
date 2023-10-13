@@ -6,17 +6,17 @@ import Typography from './Typography';
 
 const menus = [
   {
-    name: '홈',
+    name: 'posts',
     path: '/',
     mobileDisplay: 'none',
   },
   {
-    name: '포스트',
-    path: '/posts',
+    name: 'works',
+    path: '/works',
   },
   {
-    name: '일',
-    path: '/works',
+    name: 'about',
+    path: '/about',
   },
 ];
 
