@@ -22,6 +22,7 @@ const Typography = ({children, variant}: Props) => {
 export default Typography;
 
 const h1 = css`
+  margin: 0;
   font-weight: 400;
   font-size: 1.5rem;
   @media screen and (min-width: 700px) {

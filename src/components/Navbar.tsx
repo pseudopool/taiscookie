@@ -64,6 +64,7 @@ const navbar = css`
   }
   menu {
     padding: 0;
+    margin: 0;
     display: flex;
   }
   @media screen and (max-width: 700px) {

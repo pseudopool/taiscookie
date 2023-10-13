@@ -40,9 +40,9 @@ const allposts = css`
   justify-content: center;
   margin: 1rem;
   h2 {
+    margin: 0 0 2rem 0;
     font-family: Courier;
     text-align: center;
-    margin-bottom: 2rem;
   }
   ul {
     width: 100%;
