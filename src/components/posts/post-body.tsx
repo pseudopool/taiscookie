@@ -1,7 +1,7 @@
 import {css} from '@emotion/react';
 import {useEffect} from 'react';
 
-import 'highlight.js/styles/atom-one-dark.css';
+import 'highlight.js/styles/stackoverflow-light.css';
 import hljs from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 
@@ -12,18 +12,6 @@ hljs.registerLanguage('javascript', javascript);
 type Props = {
   content: string;
 };
-
-const postbody = css`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-  div#markdown {
-    object-fit: cover;
-    width: 100%;
-    max-width: 800px;
-  }
-`;
 
 const PostBody = ({content}: Props) => {
   useEffect(() => {
@@ -45,3 +33,15 @@ const PostBody = ({content}: Props) => {
 };
 
 export default PostBody;
+
+const postbody = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+  div#markdown {
+    object-fit: cover;
+    width: 100%;
+    max-width: 800px;
+  }
+`;

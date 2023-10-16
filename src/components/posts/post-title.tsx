@@ -1,6 +1,7 @@
 import {css} from '@emotion/react';
 import DateFormatter from './date-formatter';
 import Image from 'next/image';
+import Typography from '../Typography';
 
 type Props = {
   title: string;
@@ -22,7 +23,7 @@ const PostTitle = ({title, date, img, blurDataURL}: Props) => {
           blurDataURL={blurDataURL}
         />
       </div>
-      <h1>{title}</h1>
+      <Typography variant="h1">{title}</Typography>
       <DateFormatter dateString={date} />
     </div>
   );
@@ -45,8 +46,8 @@ const posttitle = css`
     width: 100%;
   }
   h1 {
-    font-weight: 500;
-    font-size: 2rem;
     margin: 1rem;
+    font-size: 1.8rem;
+    font-weight: 500;
   }
 `;

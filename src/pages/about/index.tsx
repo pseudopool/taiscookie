@@ -38,7 +38,7 @@ const index = css`
   grid-gap: 1.5rem;
   height: 50vh;
   place-content: center;
-  padding: 1rem;
+  padding: 2rem;
   span {
     font-weight: 500;
     background-color: white;

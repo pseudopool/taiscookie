@@ -7,7 +7,7 @@ import Typography from 'components/Typography';
 const Works = () => {
   return (
     <section css={works}>
-      <Typography variant="h2">works</Typography>
+      <Typography variant="h2">Experiences</Typography>
       <ul>
         {WORKS.map(work => (
           <WorkDetail key={work.name} work={work} />
@@ -23,12 +23,13 @@ const works = css`
   flex-direction: column;
   align-items: center;
   h2 {
-    font-family: Courier;
-    text-align: center;
+    font-family: pretendard sans-serif;
+    font-weight: 500;
+    margin: 1rem 0;
   }
   ul {
+    list-style: none;
     padding: 0;
     margin: 0;
-    list-style: none;
   }
 `;

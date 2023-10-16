@@ -35,16 +35,8 @@ const coverImage = css`
   margin-bottom: 1rem;
   img {
     object-fit: cover;
-    border-radius: 1rem;
+    border-radius: 0.3rem;
     height: 200px;
     width: 100%;
-  }
-  @media (min-width: 700px) {
-    width: 240px;
-    height: 240px;
-    img {
-      width: 240px;
-      height: 240px;
-    }
   }
 `;

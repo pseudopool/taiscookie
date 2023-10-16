@@ -49,6 +49,7 @@ export default function Navbar() {
 const navbar = css`
   position: fixed;
   width: 100%;
+  height: 4rem;
   z-index: 2;
   display: flex;
   align-items: center;
@@ -56,9 +57,10 @@ const navbar = css`
   background-color: #ffffff50;
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
-  box-shadow: 0 0 10px #00000010;
+  box-shadow: 0 0 50px #00000010;
   h1 {
-    font-weight: 600;
+    font-family: pretendard sans-serif;
+    font-weight: 400;
     color: #1a254b;
     cursor: pointer;
   }

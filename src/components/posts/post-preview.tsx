@@ -44,7 +44,7 @@ const preview = css`
   cursor: pointer;
   h3 {
     margin: 0 0 0.5rem 0;
-    font-size: x-large;
+    font-size: larger;
     font-weight: 500;
     line-height: 1.5;
   }
@@ -61,21 +61,9 @@ const preview = css`
       transform: translateY(-5px);
     }
     h3 {
-      transition: all 0.2s ease-in-out;
+      transition: all 0.3s ease-in-out;
       color: ${Theme.mainFontColor};
-    }
-  }
-  @media screen and (min-width: 700px) {
-    a {
-      display: flex;
-      align-items: center;
-      gap: 3rem;
-      h3 {
-        font-size: xx-large;
-      }
-      p {
-        font-size: large;
-      }
+      font-weight: 600;
     }
   }
 `;

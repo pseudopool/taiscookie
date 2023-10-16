@@ -2,7 +2,6 @@ import PostPreview from './post-preview';
 import type {Post} from 'interfaces/post';
 import {css} from '@emotion/react';
 import {Theme} from 'styles/Theme';
-import Typography from '../Typography';
 
 type Props = {
   posts: Post[];
@@ -11,9 +10,6 @@ type Props = {
 const AllPosts = ({posts}: Props) => {
   return (
     <section css={allposts}>
-      <Typography variant="h2">
-        <span>{posts.length}</span> posts
-      </Typography>
       <ul>
         {posts.map(post => (
           <PostPreview
@@ -38,12 +34,7 @@ const allposts = css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 1rem;
-  h2 {
-    margin: 0 0 2rem 0;
-    font-family: Courier;
-    text-align: center;
-  }
+  padding: 2rem;
   ul {
     width: 100%;
     padding: 0 1rem;
@@ -51,6 +42,16 @@ const allposts = css`
   }
   span {
     font-weight: 500;
+    font-family: pretendard sans-serif;
     color: ${Theme.mainFontColor};
+  }
+  @media screen and (min-width: 700px) {
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1rem;
+      padding: 0;
+      align-items: flex-start;
+    }
   }
 `;

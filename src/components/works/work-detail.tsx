@@ -29,8 +29,8 @@ export default WorkDetail;
 const workDetail = css`
   max-width: 800px;
   background-color: white;
+  margin: 0 2rem;
   padding: 1rem;
-  margin: 1rem;
   border-radius: 1rem;
   border: 2px dotted ${Theme.mainFontColor};
   h3 {
