@@ -16,6 +16,12 @@ const fetchPosts = async () => {
               direction: 'descending',
             },
           ],
+          filter: {
+            property: 'status',
+            status: {
+              equals: 'published',
+            },
+          },
         }),
       }
     )
