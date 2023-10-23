@@ -14,27 +14,48 @@ export default async function handler(request: NextRequest) {
       ? searchParams.get('title')?.slice(0, 100)
       : "Tai's Cookie";
 
+    const backgroundImage = await fetch(
+      new URL('../../../public/post-background.png', import.meta.url)
+    ).then(res => res.arrayBuffer());
+
     const fontData = await fetch(
-      new URL('../../../public/assets/Pretendard-thin.ttf', import.meta.url)
+      new URL('../../../public/assets/Pretendard-black.ttf', import.meta.url)
     ).then(res => res.arrayBuffer());
 
     return new ImageResponse(
       (
         <div
           style={{
-            background: 'rgb(0, 0, 126)',
-            fontSize: 50,
-            color: 'white',
+            position: 'relative',
             width: '100%',
             height: '100%',
-            padding: '50px 200px',
             display: 'flex',
-            textAlign: 'center',
-            justifyContent: 'center',
             alignItems: 'center',
+            justifyContent: 'center',
           }}
         >
-          {title}
+          <img
+            src={backgroundImage as unknown as string}
+            style={{
+              position: 'absolute',
+              width: '100%',
+              top: 0,
+              bottom: 0,
+              left: 0,
+              right: 0,
+            }}
+          />
+          <p
+            style={{
+              fontSize: 100,
+              color: 'white',
+              textAlign: 'center',
+              padding: 100,
+              textShadow: '0 0 50px rgba(63, 99, 134, 0.8)',
+            }}
+          >
+            {title}
+          </p>
         </div>
       ),
       {
