@@ -81,7 +81,6 @@ export async function getStaticProps({params: {id}}: Params) {
         ogImage: randomImageFromUnsplash[0].urls.thumb,
         coverImage: randomImageFromUnsplash[0].urls.regular,
         excerpt: res.properties.excerpt.rich_text[0].plain_text,
-        backgroundColor: res.properties.backgroundColor.rich_text[0].plain_text,
       };
     });
 
