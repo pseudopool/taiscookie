@@ -1,5 +1,6 @@
 import {ImageResponse} from '@vercel/og';
 import {NextRequest} from 'next/server';
+import background from './post-background.png';
 
 export const config = {
   runtime: 'edge',
@@ -15,11 +16,11 @@ export default async function handler(request: NextRequest) {
       : "Tai's Cookie";
 
     const backgroundImage = await fetch(
-      new URL('../../../public/post-background.png', import.meta.url)
+      new URL('./post-background.png', import.meta.url)
     ).then(res => res.arrayBuffer());
 
     const fontData = await fetch(
-      new URL('../../../public/assets/Pretendard-black.ttf', import.meta.url)
+      new URL('./Pretendard-Black.ttf', import.meta.url)
     ).then(res => res.arrayBuffer());
 
     return new ImageResponse(
