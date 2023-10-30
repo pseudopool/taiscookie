@@ -14,10 +14,6 @@ export default async function handler(request: NextRequest) {
       ? searchParams.get('title')?.slice(0, 100)
       : "Tai's Cookie";
 
-    const backgroundImage = await fetch(
-      new URL('../../../public/post-background.png', import.meta.url)
-    ).then(res => res.arrayBuffer());
-
     const fontData = await fetch(
       new URL('../../../public/Pretendard-Black.ttf', import.meta.url)
     ).then(res => res.arrayBuffer());
@@ -35,7 +31,7 @@ export default async function handler(request: NextRequest) {
           }}
         >
           <img
-            src={backgroundImage as unknown as string}
+            src="https://github.com/pseudopool/taiscookie/blob/main/public/post-background.png?raw=true"
             style={{
               position: 'absolute',
               width: '100%',
