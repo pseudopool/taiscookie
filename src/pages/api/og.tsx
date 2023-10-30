@@ -14,10 +14,6 @@ export default async function handler(request: NextRequest) {
       ? searchParams.get('title')?.slice(0, 100)
       : "Tai's Cookie";
 
-    const fontData = await fetch(
-      new URL('../../../public/Pretendard-Black.ttf', import.meta.url)
-    ).then(res => res.arrayBuffer());
-
     return new ImageResponse(
       (
         <div
@@ -57,13 +53,6 @@ export default async function handler(request: NextRequest) {
       {
         width: 1200,
         height: 630,
-        fonts: [
-          {
-            name: 'Pretendard',
-            data: fontData,
-            style: 'normal',
-          },
-        ],
       }
     );
   } catch (error: any) {
