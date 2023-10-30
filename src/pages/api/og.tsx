@@ -15,11 +15,11 @@ export default async function handler(request: NextRequest) {
       : "Tai's Cookie";
 
     const backgroundImage = await fetch(
-      new URL('./post-background.png', import.meta.url)
+      new URL('../../../public/post-background.png', import.meta.url)
     ).then(res => res.arrayBuffer());
 
     const fontData = await fetch(
-      new URL('./Pretendard-Black.ttf', import.meta.url)
+      new URL('../../../public/Pretendard-Black.ttf', import.meta.url)
     ).then(res => res.arrayBuffer());
 
     return new ImageResponse(
