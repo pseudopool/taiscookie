@@ -26,7 +26,7 @@ const PostPreview = ({
       <Link as={`/posts/${id}`} href="/posts/[id]">
         <CoverImage title={title} src={coverImage} blurDataURL={blurDataURL} />
         <div>
-          <h3 className="hover:underline">{title}</h3>
+          <h3>{title}</h3>
           <p>{excerpt}</p> <DateFormatter dateString={date} />
         </div>
       </Link>
