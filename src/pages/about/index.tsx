@@ -3,7 +3,6 @@ import {css} from '@emotion/react';
 
 import Typography from 'components/Typography';
 import {Theme} from '../../styles/Theme';
-import theme from 'tailwindcss/defaultTheme';
 
 const About: NextPage = () => {
   return (
