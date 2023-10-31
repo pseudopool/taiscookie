@@ -7,6 +7,7 @@ export type Work = {
   period: string;
   tech: string[];
   projects: Project[];
+  location: string;
 };
 
 export type Project = {

@@ -4,18 +4,35 @@ import {Theme} from '../styles/Theme';
 type Props = {
   children: React.ReactNode;
   variant?: 'h1' | 'h2' | 'h3';
+  className?: string;
 };
 
-const Typography = ({children, variant}: Props) => {
+const Typography = ({children, variant, className}: Props) => {
   switch (variant) {
     case 'h1':
-      return <h1 css={h1}>{children}</h1>;
+      return (
+        <h1 css={h1} className={className}>
+          {children}
+        </h1>
+      );
     case 'h2':
-      return <h2 css={h2}>{children}</h2>;
+      return (
+        <h2 css={h2} className={className}>
+          {children}
+        </h2>
+      );
     case 'h3':
-      return <h3 css={normal}>{children}</h3>;
+      return (
+        <h3 css={normal} className={className}>
+          {children}
+        </h3>
+      );
     default:
-      return <p css={normal}>{children}</p>;
+      return (
+        <p css={normal} className={className}>
+          {children}
+        </p>
+      );
   }
 };
 

@@ -17,6 +17,8 @@ module.exports = {
       link: '#1971C2',
       gray: {
         text: '#4E5968',
+        span: '#B7BABE',
+        bg: '#f2f4f6',
       },
     },
     extend: {},
