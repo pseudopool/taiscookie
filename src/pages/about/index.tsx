@@ -2,6 +2,8 @@ import type {NextPage} from 'next';
 import {css} from '@emotion/react';
 
 import Typography from 'components/Typography';
+import {Theme} from '../../styles/Theme';
+import theme from 'tailwindcss/defaultTheme';
 
 const About: NextPage = () => {
   return (
@@ -39,18 +41,19 @@ const index = css`
   height: 50vh;
   place-content: center;
   padding: 2rem;
+  p {
+    line-height: 2rem;
+  }
   span {
-    font-weight: 500;
-    background-color: white;
-    border: 1.5px dashed #1a254b;
-    border-radius: 0.5rem;
-    padding: 0 0.5rem;
+    font-weight: 800;
+    color: ${Theme.mainFontColor};
+    padding: 0.1rem 0.5rem;
     margin: 0 0.5rem;
   }
   @media screen and (max-width: 700px) {
     display: flex;
     flex-direction: column;
-    grid-gap: 0;
+    grid-gap: 1rem;
     height: 100%;
   }
 `;

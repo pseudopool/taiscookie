@@ -8,19 +8,22 @@
 }
 
 .markdown h2 {
-  font-weight: 400;
+  font-weight: 600;
   font-size: 1.5rem;
   color: rgb(0, 0, 127);
   border-bottom: 1px solid #00000020;
   padding-bottom: 0.5rem;
+  margin: 1rem 0;
 }
 
 .markdown h3 {
+  font-size: 1.3rem;
   font-weight: 500;
+  margin: 1rem 0;
 }
 
 .markdown p {
-  font-weight: 300;
+    margin: 1rem 0;
 }
 
 .markdown strong {
@@ -28,13 +31,14 @@
 }
 
 .markdown li {
-  list-style: disc;
-  font-weight: 300;
+  list-style: '•';
+  margin: 0 1rem;
 }
 
 .markdown pre {
   border: 1px solid #00000010;
   border-radius: 0.5rem;
+  margin: 1rem 0;
 }
 
 .markdown code {

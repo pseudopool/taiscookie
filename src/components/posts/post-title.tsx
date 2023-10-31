@@ -44,6 +44,7 @@ const posttitle = css`
   img {
     object-fit: cover;
     width: 100%;
+    height: 200px;
   }
   h1 {
     margin: 1rem;
