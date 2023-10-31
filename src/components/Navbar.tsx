@@ -63,6 +63,7 @@ const navbar = css`
     font-weight: 400;
     color: #1a254b;
     cursor: pointer;
+    font-size: 1.5rem;
   }
   menu {
     padding: 0;

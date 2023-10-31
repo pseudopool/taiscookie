@@ -17,6 +17,10 @@ export default function Footer() {
 }
 
 const footer = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
   text-align: center;
   width: 100%;
   bottom: 0px;
