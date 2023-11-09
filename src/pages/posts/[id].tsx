@@ -17,7 +17,6 @@ type Props = {
 };
 
 export default function Post({post}: Props) {
-  console.log(post);
   const router = useRouter();
 
   if (!router.isFallback && !post?.id) {
