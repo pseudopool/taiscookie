@@ -5,8 +5,6 @@ export type Post = {
   coverImage: string;
   blurDataURL: string;
   excerpt: string;
-  ogImage: {
-    url: string;
-  };
+  ogImage: string;
   content: string;
 };

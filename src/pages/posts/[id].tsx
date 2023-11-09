@@ -1,14 +1,15 @@
 import {useRouter} from 'next/router';
-import markdownToHtml from 'utils/markdownToHtml';
 import Head from 'next/head';
 import ErrorPage from 'next/error';
+import {getPlaiceholder} from 'plaiceholder';
+
+import fetchPosts from 'apis/fetchPosts';
+import fetchRandomImage from 'apis/fetchRandomImage';
+import {URL} from 'consts/url';
 import PostTitle from 'components/posts/post-title';
 import PostBody from 'components/posts/post-body';
+import markdownToHtml from 'utils/markdownToHtml';
 import type {Post} from 'interfaces/post';
-import {getPlaiceholder} from 'plaiceholder';
-import fetchPosts from 'apis/fetchPosts';
-import {URL} from 'consts/url';
-import fetchRandomImage from '../../apis/fetchRandomImage';
 
 type Props = {
   post: Post;
@@ -16,6 +17,7 @@ type Props = {
 };
 
 export default function Post({post}: Props) {
+  console.log(post);
   const router = useRouter();
 
   if (!router.isFallback && !post?.id) {
@@ -38,7 +40,7 @@ export default function Post({post}: Props) {
             <meta name="description" content={post.excerpt} />
             <meta property="og:title" content={post.title} />
             <meta property="og:description" content={post.excerpt} />
-            <meta property="og:image" content={post.ogImage.url} />
+            <meta property="og:image" content={post.ogImage} />
           </Head>
           <PostTitle
             title={post.title}
