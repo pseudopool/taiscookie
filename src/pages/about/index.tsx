@@ -2,30 +2,30 @@ import type {NextPage} from 'next';
 import {css} from '@emotion/react';
 
 import Typography from 'components/Typography';
-import {Theme} from '../../styles/Theme';
+import {Theme} from 'styles/Theme';
 
 const About: NextPage = () => {
   return (
     <article css={index}>
       <Typography>
-        <span>하나</span>
-        1994년 10월 24일 출생. 동국대학교에서 광고홍보학과 신문방송학을
-        공부했다. 지난 몇 년 동안 <em>카피라이터와 에디터, 그리고 마케터</em>로
-        일했다.
+        <span>전문성</span>
+        프론트엔드 개발자. <em>매끄러운, 쉬운, 모두에게 열린 사용자 경험</em>에
+        집중한다. 접근성, 반응형 웹, 웹 표준, 웹 성능, SEO, 다국어 지원을
+        고려하여 개발한다.
       </Typography>
       <Typography>
-        <span>둘</span>
-        기획과 프로그래밍 사이를 단단하게 엮는 프론트엔드 개발자를 목표로,
-        2022년부터 꾸준히 프로그래밍을 공부하고 있다.
+        <span>강점</span>수년간 카피라이터와 에디터, 그리고 마케터로 일했다.{' '}
+        <em>사용자의 행동을 탐구해 서비스에 필요한 단어와 문장을 찾아내던</em>{' '}
+        습관을 간직한 채 개발한다.
       </Typography>
       <Typography>
-        <span>셋</span>
-        <em>사용자의 행동을 탐구</em>해 서비스에 필요한 단어와 문장을 찾아내던
-        습관을 간직한 채 개발 분야를 파고들고 있다.
+        <span>열정</span>
+        읽기와 쓰기, 테크노와 개버, 감자 요리와 피자, 리슬링과 드라이 마티니,
+        단순한 영화와 건조한 그림, 모든 생명에 대한 존중과 사랑.
       </Typography>
       <Typography>
-        <span>넷</span>
-        도움이 필요한 고양이를 주울 기회를 은근하게 기다리고 있다.
+        <span>만트라</span>
+        ἄσκησις, αὐτάρκεια, ἀναίδεια
       </Typography>
     </article>
   );
@@ -35,10 +35,8 @@ export default About;
 
 const index = css`
   display: grid;
-  grid-template-columns: 45% 45%;
+  grid-template-columns: 50% 50%;
   grid-gap: 1.5rem;
-  height: 50vh;
-  place-content: center;
   padding: 2rem;
   p {
     line-height: 2rem;
@@ -46,8 +44,9 @@ const index = css`
   span {
     font-weight: 800;
     color: ${Theme.mainFontColor};
-    padding: 0.1rem 0.5rem;
-    margin: 0 0.5rem;
+    margin-right: 0.5rem;
+    padding-right: 0.5rem;
+    border-right: 2px dotted ${Theme.mainFontColor};
   }
   @media screen and (max-width: 700px) {
     display: flex;
