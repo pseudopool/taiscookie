@@ -11,6 +11,13 @@ export default function Layout({children}: React.PropsWithChildren<{}>) {
       <Head>
         <title>타이의 쿠키</title>
         <link rel="shortcut icon" href="/favicon.png" />
+        <meta name="description" content="Take a bite." />
+        <meta name="og:title" content="Tai's Cookie" />
+        <meta property="og:description" content="Take a bite." />
+        <meta
+          property="og:image"
+          content="https://github.com/pseudopool/taiscookie/blob/main/public/post-background.png?raw=true"
+        />
         <meta
           name="google-site-verification"
           content="DDEZrz9lubJFHFHFDO426TLckWKDClbXLoB4_T3RVk8"
