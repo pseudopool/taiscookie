@@ -21,6 +21,15 @@ export const WORKS = [
     ],
     projects: [
       {
+        name: '컨텐츠 TF',
+        description: '컨텐츠 페이지 신규 개발',
+        features: [
+          '재사용 가능한 UI/UX 가이드라인 공유를 위한 팀간 협업 및 스타일 configuration 적용',
+          'Optimistic Response 적용을 통한 UX 개선',
+        ],
+        period: '2023.11 ~ 2023.12',
+      },
+      {
         name: '이벤트 TF',
         description:
           '이벤트 페이지 프레임워크 전환 및 서포트 댓글 기능 신규 개발',
@@ -37,6 +46,7 @@ export const WORKS = [
         features: [
           '레거시 도메인 및 비즈니스 로직을 테스트 가능한 코드로 개선',
           '불필요한 API 호출 제어를 위한 클라이언트 컴포넌트 최적화',
+          'POST 요청 후 캐시 업데이트 로직 적용으로 백엔드 캐싱 타임 대응',
         ],
         period: '2023.04 ~ 2023.05',
       },
