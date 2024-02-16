@@ -23,7 +23,7 @@ const dummyPosts = [
 
 const PostsPage = () => {
   return (
-    <ul className="p-2 w-full grid grid-cols-2 gap-2 lg:grid-cols-3">
+    <ul className="p-6 w-full grid grid-cols-2 gap-6 lg:grid-cols-3">
       {dummyPosts.map((post) => (
         <li key={post.id} className="w-full border-2 border-black text-center">
           <Image
