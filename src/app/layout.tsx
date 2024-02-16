@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
+import Navigator from "@/components/navigator";
 
 const noto_sans_kr = Noto_Sans_KR({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={noto_sans_kr.className}>{children}</body>
+      <body className={noto_sans_kr.className}>
+        <Navigator />
+        {children}
+      </body>
     </html>
   );
 }
