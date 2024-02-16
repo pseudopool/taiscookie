@@ -8,7 +8,7 @@ export default function Home() {
         alt="Tai seating on a cloud with a laptop and two dogs."
         width={200}
         height={200}
-        className="rounded"
+        className="rounded select-none"
       />
     </article>
   );
