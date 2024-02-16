@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <article>
+    <main className="flex min-h-screen items-center justify-center bg-black text-white">
       <Image
         src="/main.jpeg"
         alt="Tai seating on a cloud with a laptop and two dogs."
@@ -10,6 +10,6 @@ export default function Home() {
         height={200}
         className="rounded select-none"
       />
-    </article>
+    </main>
   );
 }
