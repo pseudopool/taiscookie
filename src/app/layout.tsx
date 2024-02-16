@@ -19,7 +19,9 @@ export default function RootLayout({
     <html lang="ko">
       <body className={noto_sans_kr.className}>
         <Navigator />
-        {children}
+        <main className="flex min-h-screen items-center justify-center">
+          {children}
+        </main>
       </body>
     </html>
   );
