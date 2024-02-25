@@ -1,41 +1,28 @@
 import Image from "next/image";
 
-const dummyPosts = [
-  {
-    id: 1,
-    title: "Post 1",
-    content: "This is the first post.",
-    image: "/main.jpeg",
-  },
-  {
-    id: 2,
-    title: "Post 2",
-    content: "This is the second post.",
-    image: "/main.jpeg",
-  },
-  {
-    id: 3,
-    title: "Post 3",
-    content: "This is the third post.",
-    image: "/main.jpeg",
-  },
-];
+import { fetchPosts } from "@/apis/fetchPosts";
+import { formatNotionPost } from "@/libs/formatNotionPost";
+import { Post } from "@/types/post";
 
-const PostsPage = () => {
+const PostsPage = async () => {
+  const allPosts = await fetchPosts().then((res) =>
+    res.results.map((post: any) => formatNotionPost(post))
+  );
+
   return (
     <ul className="p-6 w-full grid grid-cols-2 gap-6 lg:grid-cols-3">
-      {dummyPosts.map((post) => (
+      {allPosts.map((post: Post) => (
         <li key={post.id} className="w-full border-2 border-black text-center">
           <Image
             className="w-full"
-            src={post.image}
+            src="/main.jpeg"
             alt={post.title}
             width={200}
             height={200}
           />
-          <div className="p-4 font-mono">
-            <h2>{post.title}</h2>
-            <p>{post.content}</p>
+          <div className="p-4 font-mono break-keep flex flex-col gap-4">
+            <h2 className="text-xl font-bold">{post.title}</h2>
+            <p className="text-gray-600">{post.excerpt}</p>
           </div>
         </li>
       ))}
