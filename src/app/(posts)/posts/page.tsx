@@ -3,7 +3,7 @@ import Loading from "@/components/loading";
 import Posts from "@/components/post/posts";
 
 const PostsPage = async () => (
-  <section className="w-full flex justify-center">
+  <section className="max-w-screen-2xl">
     <Suspense fallback={<Loading />}>
       <Posts />
     </Suspense>

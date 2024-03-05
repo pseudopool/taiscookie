@@ -20,7 +20,9 @@ export default function RootLayout({
     <html lang="ko">
       <body className={noto_sans_kr.className}>
         <Navigator />
-        {children}
+        <main className="flex w-full flex-col items-center justify-center">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>
