@@ -1,5 +1,5 @@
 import { fetchPosts } from "@/apis/fetchPosts";
-import { formatNotionPost } from "@/libs/formatNotionPost";
+import { formatNotionPost } from "@/libs/presenter";
 import { Post as PostType } from "@/types/post";
 import Post from "./post";
 
