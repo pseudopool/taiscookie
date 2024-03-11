@@ -1,18 +1,14 @@
 "use client";
 
 import classNames from "classnames";
-import { useState } from "react";
 
 type Props = {
   groups: string[];
+  handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  active: string;
 };
 
-const ToggleGroup = ({ groups }: Props) => {
-  const [active, setActive] = useState(groups[0]);
-
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) =>
-    setActive(e.currentTarget.textContent as string);
-
+const ToggleGroup = ({ groups, handleClick, active }: Props) => {
   return (
     <div className="w-full flex justify-between bg-gray-100 text-gray-500 rounded font-mono overflow-clip">
       {groups.map((group) => (
