@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navigator = () => {
   return (
-    <nav className="p-2 sticky top-0 bg-white border-b-2 border-black">
+    <nav className="p-2 sticky top-0 bg-white border-b-2 border-black z-10">
       <ul className="flex w-full items-center justify-around font-mono font-semibold">
         <li>
           <Link href="/posts">Posts</Link>
