@@ -17,6 +17,9 @@ const Summary = ({ job }: Props) => (
     />
     <div className="flex h-full flex-col gap-1 justify-between">
       <h2 className="text-xl font-bold">{job.name}</h2>
+      <span className="text-xs">
+        {job.enterDate} ~ {job.leaveDate ?? "현재"}
+      </span>
       <h3 className="text-gray-500 mb-1 text-sm">{job.role}</h3>
       <Link href="https://www.ktown4u.com" target="_blank">
         <span className="text-sm border-b border-black pb-1 pr-2">
