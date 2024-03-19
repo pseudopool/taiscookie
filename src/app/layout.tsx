@@ -9,6 +9,9 @@ const noto_sans_kr = Noto_Sans_KR({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Tai's Cookie",
   description: "Take a bite.",
+  verification: {
+    google: "DDEZrz9lubJFHFHFDO426TLckWKDClbXLoB4_T3RVk8",
+  },
 };
 
 export default function RootLayout({
