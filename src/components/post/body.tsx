@@ -6,6 +6,7 @@ import "highlight.js/styles/tokyo-night-dark.css";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
 import markdownStyles from "@/styles/markdown.module.css";
+import classNames from "classnames";
 
 hljs.registerLanguage("javascript", javascript);
 
@@ -19,7 +20,7 @@ const PostBody = ({ content }: { content: string }) => {
 
   return (
     <article
-      className={markdownStyles["markdown"]}
+      className={classNames(markdownStyles["markdown"], "w-11/12 mx-auto")}
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );
