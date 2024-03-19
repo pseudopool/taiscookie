@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.2.2",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.10",
     "highlight.js": "^11.9.0",
