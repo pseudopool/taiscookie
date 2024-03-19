@@ -20,7 +20,7 @@ const PostBody = ({ content }: { content: string }) => {
 
   return (
     <article
-      className={classNames(markdownStyles["markdown"], "w-11/12 mx-auto")}
+      className={markdownStyles["markdown"]}
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );
