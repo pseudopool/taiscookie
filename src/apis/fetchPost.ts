@@ -19,6 +19,9 @@ const fetchInformation = async (id: string) => {
         "Notion-Version": "2021-05-13",
       },
       method: "GET",
+      next: {
+        revalidate: 3600,
+      },
     })
   )
     .json()
