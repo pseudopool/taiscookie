@@ -20,7 +20,7 @@ const PostBody = ({ content }: { content: string }) => {
 
   return (
     <article
-      className={markdownStyles["markdown"]}
+      className={classNames(markdownStyles["markdown"], "break-words")}
       dangerouslySetInnerHTML={{ __html: content }}
     />
   );

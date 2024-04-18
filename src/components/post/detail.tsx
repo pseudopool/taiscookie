@@ -10,10 +10,10 @@ const PostDetail = async ({ id }: Props) => {
 
   return (
     <>
-      <h1 className="text-2xl text-center font-bold break-keep">
+      <h1 className="text-2xl text-center font-bold break-words">
         {post.title}
       </h1>
-      <h2 className="text-xl text-center font-medium break-keep">
+      <h2 className="text-xl text-center font-medium break-words">
         {post.excerpt}
       </h2>
       <span className="block text-lg text-center font-thin">{post.date}</span>
