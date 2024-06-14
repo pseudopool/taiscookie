@@ -26,10 +26,8 @@ const Works = ({ works }: Props) => {
       <ToggleGroup groups={skills} handleClick={handleClick} active={active} />
       <ul className="w-full py-6 flex flex-col gap-6">
         {works[active as keyof typeof works].map((work: Work) => (
-          <li key={work.title} className="flex flex-col gap-4">
-            <h3 className="text-lg font-semibold border-b pb-2">
-              {work.title}
-            </h3>
+          <li key={work.title} className="flex flex-col gap-3">
+            <h3 className="text-lg font-medium border-b pb-2">{work.title}</h3>
             <ul className="pl-8 flex flex-col gap-2 text-gray-600">
               {work.contents.map((content) => (
                 <li key={content} className="list-disc">
