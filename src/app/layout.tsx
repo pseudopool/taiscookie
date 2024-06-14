@@ -12,6 +12,13 @@ const pretendard = localFont({
   variable: "--font-pretendard",
 });
 
+const azeret = localFont({
+  src: "../../public/fonts/AzeretMono-VariableFont.ttf",
+  display: "swap",
+  weight: "400",
+  variable: "--font-azeret",
+});
+
 export const metadata: Metadata = {
   title: "Tai's Cookie",
   description: "Take a bite.",
@@ -26,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" className={`${pretendard.variable}`}>
+    <html lang="ko" className={`${pretendard.variable} ${azeret.variable}`}>
       <body className={pretendard.className}>
         <Navigator />
         <main className="flex w-full flex-col items-center justify-center">

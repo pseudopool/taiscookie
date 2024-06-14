@@ -40,7 +40,7 @@ const RandomFacts = () => {
           </span>
         </div>
       </button>
-      <p className="font-mono">{randomFact}</p>
+      <p className="font-azeret">{randomFact}</p>
     </>
   );
 };

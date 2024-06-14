@@ -9,7 +9,7 @@ type Props = {
 };
 
 const ToggleGroup = ({ groups, handleClick, active }: Props) => (
-  <div className="w-full flex justify-between rounded font-mono overflow-clip border-2 border-black">
+  <div className="w-full flex justify-between rounded font-azeret overflow-clip border-2 border-black">
     {groups.map((group) => (
       <button
         key={group}

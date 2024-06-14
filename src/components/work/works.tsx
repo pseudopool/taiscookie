@@ -27,7 +27,7 @@ const Works = ({ works }: Props) => {
       <ul className="w-full py-6 flex flex-col gap-6">
         {works[active as keyof typeof works].map((work: Work) => (
           <li key={work.title} className="flex flex-col gap-4">
-            <h3 className="text-lg font-mono font-semibold border-b pb-2">
+            <h3 className="text-lg font-semibold border-b pb-2">
               {work.title}
             </h3>
             <ul className="pl-8 flex flex-col gap-2 text-gray-600">

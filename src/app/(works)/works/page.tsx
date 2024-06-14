@@ -5,7 +5,7 @@ import { Fragment } from "react";
 
 const WorksPage = () => (
   <section className="w-full max-w-screen-sm">
-    <ul className="flex flex-col w-full items-center gap-6 font-mono p-6">
+    <ul className="flex flex-col w-full items-center gap-6 p-6">
       {jobs.map((job) => (
         <Fragment key={job.name}>
           <Summary job={job} />

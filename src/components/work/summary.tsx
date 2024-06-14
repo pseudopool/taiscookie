@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Summary = ({ job }: Props) => (
-  <div className="flex justify-center items-center gap-6 p-6">
+  <div className="flex justify-center items-center gap-6 p-6 font-azeret">
     <Image
       src="/ktown4u.ico"
       alt="ktown4u"

@@ -41,7 +41,7 @@ const Post = ({ post, index }: Props) => (
         width={200}
         height={200}
       />
-      <div className="p-4 font-mono break-keep flex flex-col gap-4">
+      <div className="p-4 break-keep flex flex-col gap-4">
         <h2 className="text-xl font-bold">{post.title}</h2>
         <p className="text-gray-600">{post.excerpt}</p>
         <span>{dayjs(post.date).fromNow()}</span>
