@@ -7,6 +7,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    colors: {
+      ...require("tailwindcss/colors"),
+      highlight: "#85ff5e",
+    },
     extend: {
       fontFamily: {
         pretendard: ["var(--font-pretendard)"],

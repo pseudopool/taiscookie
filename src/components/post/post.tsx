@@ -32,8 +32,8 @@ type Props = {
 };
 
 const Post = ({ post, index }: Props) => (
-  <li key={post.id} className="w-full border-2 border-black text-center">
-    <Link href={`/posts/${post.id}`}>
+  <li key={post.id} className="w-full">
+    <Link href={`/posts/${post.id}`} className="w-full">
       <Image
         className="w-full object-cover"
         src={`/posts/${index}.jpeg`}
@@ -41,10 +41,16 @@ const Post = ({ post, index }: Props) => (
         width={200}
         height={200}
       />
-      <div className="p-4 break-keep flex flex-col gap-4">
-        <h2 className="text-xl font-medium">{post.title}</h2>
-        <p className="text-gray-600">{post.excerpt}</p>
-        <span>{dayjs(post.date).fromNow()}</span>
+      <div className="break-keep flex flex-col">
+        <h2 className="border-black border-b-2 p-2 text-xl font-medium">
+          {post.title}
+        </h2>
+        <p className="border-black border-b-2 p-2 text-gray-500 font-light">
+          {post.excerpt}
+        </p>
+        <span className="text-sm text-right p-1 bg-highlight">
+          {dayjs(post.date).fromNow()}
+        </span>
       </div>
     </Link>
   </li>
