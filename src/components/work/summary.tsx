@@ -10,7 +10,7 @@ const Summary = ({ job }: Props) => (
     <Link
       href="https://kr.ktown4u.com"
       target="_blank"
-      className="text-xl font-medium pb-1 border-b-2 border-blue-500"
+      className="text-xl font-medium pb-1 border-b-2 border-highlight"
     >
       {job.name}{" "}
       <span className=" font-azeret text-base">{job.globalName}</span>{" "}

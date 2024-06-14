@@ -32,9 +32,7 @@ const Works = ({ works }: Props) => {
               key={work.title}
               className="grid grid-cols-10 border-b border-b-gray-500 py-4"
             >
-              <h3 className="col-span-3 font-medium border-b pb-2">
-                {work.title}
-              </h3>
+              <h3 className="col-span-3 font-medium pb-2">{work.title}</h3>
               <ul className="col-span-7 pl-8 flex flex-col gap-2 font-light">
                 {work.contents.map((content) => (
                   <li key={content}>{content}</li>
