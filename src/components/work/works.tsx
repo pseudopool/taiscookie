@@ -16,28 +16,34 @@ type Work = {
 };
 
 const Works = ({ works }: Props) => {
-  const [active, setActive] = useState(skills[0]);
+  const [active, setActive] = useState("");
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) =>
-    setActive(e.currentTarget.textContent as string);
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (e.currentTarget.value === active) return setActive("");
+    setActive(e.currentTarget.value as string);
+  };
 
   return (
     <>
-      <ToggleGroup groups={skills} handleClick={handleClick} active={active} />
-      <ul className="w-full py-6 flex flex-col gap-6">
-        {works[active as keyof typeof works].map((work: Work) => (
-          <li key={work.title} className="flex flex-col gap-3">
-            <h3 className="text-lg font-medium border-b pb-2">{work.title}</h3>
-            <ul className="pl-8 flex flex-col gap-2 text-gray-600">
-              {work.contents.map((content) => (
-                <li key={content} className="list-disc">
-                  {content}
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
+      <ToggleGroup groups={skills} handleClick={handleClick} active={active}>
+        <ul className="w-full px-2 flex flex-col break-keep">
+          {works[active as keyof typeof works]?.map((work: Work) => (
+            <li
+              key={work.title}
+              className="grid grid-cols-10 border-b border-b-gray-500 py-4"
+            >
+              <h3 className="col-span-3 font-medium border-b pb-2">
+                {work.title}
+              </h3>
+              <ul className="col-span-7 pl-8 flex flex-col gap-2 font-light">
+                {work.contents.map((content) => (
+                  <li key={content}>{content}</li>
+                ))}
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </ToggleGroup>
     </>
   );
 };

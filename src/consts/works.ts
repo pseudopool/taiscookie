@@ -1,6 +1,7 @@
 export const jobs = [
   {
     name: "케이타운포유",
+    globalName: "Ktown4u",
     role: "Software Engineer, Front-end",
     link: "https://www.ktown4u.com",
     enterDate: "2023.01.02",

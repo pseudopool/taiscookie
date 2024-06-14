@@ -4,8 +4,8 @@ import { jobs } from "@/consts/works";
 import { Fragment } from "react";
 
 const WorksPage = () => (
-  <section className="w-full max-w-screen-sm">
-    <ul className="flex flex-col w-full items-center gap-6 p-6">
+  <section className="w-full max-w-screen-md">
+    <ul className="flex flex-col w-full items-center">
       {jobs.map((job) => (
         <Fragment key={job.name}>
           <Summary job={job} />

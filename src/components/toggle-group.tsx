@@ -1,27 +1,33 @@
 "use client";
 
 import classNames from "classnames";
+import { ReactNode } from "react";
 
 type Props = {
+  children: ReactNode;
   groups: string[];
   handleClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
   active: string;
 };
 
-const ToggleGroup = ({ groups, handleClick, active }: Props) => (
-  <div className="w-full flex justify-between rounded font-azeret overflow-clip border-2 border-black">
+const ToggleGroup = ({ groups, handleClick, active, children }: Props) => (
+  <div className="w-full flex flex-col">
     {groups.map((group) => (
-      <button
-        key={group}
-        className={classNames(
-          "transition-color duration-200",
-          "w-full p-2",
-          active === group ? "bg-black text-white font-bold" : ""
-        )}
-        onClick={handleClick}
-      >
-        {group}
-      </button>
+      <>
+        <button
+          key={group}
+          value={group}
+          className={classNames(
+            "w-full flex justify-between py-2 px-4 border-b-2 border-black text-xl",
+            active === group ? "font-medium bg-highlight" : ""
+          )}
+          onClick={handleClick}
+        >
+          {group}
+          <span>+</span>
+        </button>
+        {active === group && children}
+      </>
     ))}
   </div>
 );

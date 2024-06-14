@@ -1,5 +1,4 @@
 import { Job } from "@/consts/works";
-import Image from "next/image";
 import Link from "next/link";
 
 type Props = {
@@ -7,26 +6,19 @@ type Props = {
 };
 
 const Summary = ({ job }: Props) => (
-  <div className="flex justify-center items-center gap-6 p-6 font-azeret">
-    <Image
-      src="/ktown4u.ico"
-      alt="ktown4u"
-      width={70}
-      height={70}
-      className="grayscale"
-    />
-    <div className="flex h-full flex-col gap-1 justify-between">
-      <h2 className="text-xl font-bold">{job.name}</h2>
-      <span className="text-xs">
-        {job.enterDate} ~ {job.leaveDate ?? "현재"}
-      </span>
-      <h3 className="text-gray-500 mb-1 text-sm">{job.role}</h3>
-      <Link href="https://www.ktown4u.com" target="_blank">
-        <span className="text-sm border-b border-black pb-1 pr-2">
-          {job.link}
-        </span>
-      </Link>
-    </div>
+  <div className="py-4 w-full flex flex-col items-center border-b-2 border-black gap-2">
+    <Link
+      href="https://kr.ktown4u.com"
+      target="_blank"
+      className="text-xl font-medium pb-1 border-b-2 border-blue-500"
+    >
+      {job.name}{" "}
+      <span className=" font-azeret text-base">{job.globalName}</span>{" "}
+    </Link>
+    <span className="text-xs text-gray-500 font-azeret">
+      {job.enterDate} ~ {job.leaveDate ?? "Present"}
+    </span>
+    <h3 className="text-xs font-azeret text-gray-500">{job.role}</h3>
   </div>
 );
 
