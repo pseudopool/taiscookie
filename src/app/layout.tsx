@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
 import Navigator from "@/components/navigator";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
+import localFont from "next/font/local";
 
-const noto_sans_kr = Noto_Sans_KR({ subsets: ["latin"] });
+const pretendard = localFont({
+  src: "../../public/fonts/PretendardVariable.woff2",
+  display: "swap",
+  weight: "45 920",
+  variable: "--font-pretendard",
+});
 
 export const metadata: Metadata = {
   title: "Tai's Cookie",
@@ -21,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
-      <body className={noto_sans_kr.className}>
+    <html lang="ko" className={`${pretendard.variable}`}>
+      <body className={pretendard.className}>
         <Navigator />
         <main className="flex w-full flex-col items-center justify-center">
           {children}
