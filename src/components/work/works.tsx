@@ -35,7 +35,9 @@ const Works = ({ works }: Props) => {
               <h3 className="col-span-3 font-medium pb-2">{work.title}</h3>
               <ul className="col-span-7 pl-8 flex flex-col gap-2 font-light">
                 {work.contents.map((content) => (
-                  <li key={content}>{content}</li>
+                  <li key={content} className="list-disc marker:text-highlight">
+                    {content}
+                  </li>
                 ))}
               </ul>
             </li>

@@ -18,7 +18,7 @@ const ToggleGroup = ({ groups, handleClick, active, children }: Props) => (
           key={group}
           value={group}
           className={classNames(
-            "w-full flex justify-between py-2 px-4 border-b-2 border-black text-xl",
+            "w-full flex justify-between py-2 px-4 border-b-2 border-black text-lg font-azeret",
             active === group ? "font-medium bg-highlight" : ""
           )}
           onClick={handleClick}
