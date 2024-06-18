@@ -17,6 +17,7 @@ const Board = ({ children }: Props) => {
         maxHeight: "1200px",
       }}
       className="w-full"
+      id="container"
     >
       <Suspense
         fallback={
@@ -26,7 +27,7 @@ const Board = ({ children }: Props) => {
         }
       >
         <Canvas>
-          <OrbitControls autoRotate autoRotateSpeed={50} />
+          <OrbitControls autoRotate autoRotateSpeed={20} />
           <ambientLight intensity={5} />
           <group>{children}</group>
           <PerspectiveCamera makeDefault position={[20, 90, 80]} />
