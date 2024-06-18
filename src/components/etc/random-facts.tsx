@@ -43,7 +43,7 @@ const RandomFacts = () => {
         </Board>
       </button>
       <p
-        className="absolute w-2/3 rotate-6 max-w-screen-sm font-azeret text-center px-2 py-1 bg-gray-100 break-keep transition-opacity duration-300 select-none"
+        className="absolute mx-4 w-fit rotate-6 max-w-screen-sm font-azeret text-center px-2 py-1 bg-gray-100 break-keep transition-opacity duration-300 select-none"
         style={{
           opacity: randomFact ? 1 : 0,
           backgroundColor: randomFact
