@@ -28,7 +28,7 @@ const RandomFacts = () => {
   useEffect(() => {
     const timeout = setTimeout(() => {
       setRandomFact("");
-    }, 3000);
+    }, 1500);
     return () => clearTimeout(timeout);
   }, [randomFact]);
 
