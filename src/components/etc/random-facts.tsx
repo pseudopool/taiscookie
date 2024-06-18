@@ -50,8 +50,8 @@ const RandomFacts = () => {
             ? "rgba(255, 255, 255, 0.9)"
             : "transparent",
           border: randomFact
-            ? "2px solid rgba(0, 0, 0, 0.6)"
-            : "2px solid transparent",
+            ? "1px solid rgba(0, 0, 0)"
+            : "1px solid transparent",
         }}
       >
         {randomFact}
