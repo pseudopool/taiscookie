@@ -2,7 +2,12 @@ import RandomFacts from "@/components/etc/random-facts";
 
 const EtcPage = () => {
   return (
-    <section className="size-full flex flex-col items-center justify-center p-6">
+    <section
+      className="w-full flex flex-col items-center justify-center"
+      style={{
+        height: "calc(100vh - 4rem)",
+      }}
+    >
       <RandomFacts />
     </section>
   );

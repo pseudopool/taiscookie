@@ -8,7 +8,7 @@ const FortuneCookie = (props) => {
 
   return (
     <group {...props} dispose={null}>
-      <group scale={1}>
+      <group scale={0.8}>
         <mesh
           geometry={nodes.Model_material0_0.geometry}
           material={materials.material0}

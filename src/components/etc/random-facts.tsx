@@ -32,7 +32,9 @@ const RandomFacts = () => {
           <FortuneCookie />
         </Board>
       </button>
-      <p className="font-azeret">{randomFact}</p>
+      <p className="font-azeret w-full text-center px-8 break-keep">
+        {randomFact}
+      </p>
     </>
   );
 };

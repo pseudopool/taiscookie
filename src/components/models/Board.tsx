@@ -3,7 +3,6 @@
 import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { ReactNode, Suspense } from "react";
-import Loading from "../loading";
 import { MoonLoader } from "react-spinners";
 
 type Props = {
@@ -17,6 +16,7 @@ const Board = ({ children }: Props) => {
         height: "60vh",
         maxHeight: "1200px",
       }}
+      className="w-full"
     >
       <Suspense
         fallback={
