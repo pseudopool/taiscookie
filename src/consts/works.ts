@@ -23,11 +23,20 @@ export const jobs = [
     works: {
       Features: [
         {
+          title: "장바구니 기능 신규 개발",
+          contents: [
+            "FO 장바구니 페이지 및 상품 추가, 삭제, 수량 변경 기능",
+            "Feature Flag를 통한 레거시 장바구니 서비스 분기 및 이중운영",
+            "LocalStorage를 통한 게스트 유저용 장바구니 구현",
+            "국내 법규 준수를 위한 본인인증 API 연동",
+          ],
+        },
+        {
           title: "콘텐츠 기능 신규 개발",
           contents: [
             "FO 콘텐츠 리스트 및 상세 페이지",
             "FO 좋아요, 댓글 CRUD",
-            "client storage 기반 비로그인 유저 좋아요 기능 구현 및 로그인 시 동기화",
+            "Client Storage 기반 비로그인 유저 좋아요 기능 구현 및 로그인 시 동기화",
             "BO 콘텐츠 등록, 편집 및 상태 관리(임시 저장, 발행) 기능 개발",
             "BO 댓글 관리 기능",
           ],
