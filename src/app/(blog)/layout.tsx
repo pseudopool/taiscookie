@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "../globals.css";
 import Navigator from "@/components/navigator";
 import Footer from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
 import localFont from "next/font/local";
 
 const pretendard = localFont({
-  src: "../../public/fonts/PretendardVariable.woff2",
+  src: "../../../public/fonts/PretendardVariable.woff2",
   display: "swap",
   weight: "45 920",
   variable: "--font-pretendard",
 });
 
 const azeret = localFont({
-  src: "../../public/fonts/AzeretMono-VariableFont.ttf",
+  src: "../../../public/fonts/AzeretMono-VariableFont.ttf",
   display: "swap",
   weight: "400",
   variable: "--font-azeret",
