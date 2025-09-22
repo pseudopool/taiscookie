@@ -1,17 +1,13 @@
 import { sanityFetch } from "@/libs/sanity/live";
 
-import { fetchPosts } from "@/apis/fetchPosts";
-import { formatNotionPost } from "@/libs/presenter";
 import { Post as PostType } from "@/types/post";
 import Post from "./post";
 import { allPostsQuery } from "@/libs/sanity/queries";
+import { AllPostsQueryResult } from "@/libs/sanity/sanity.types";
 
 const Posts = async () => {
-  const allPosts = await fetchPosts().then((res: any) =>
-    res.results.map((post: any) => formatNotionPost(post))
-  );
   const { data } = await sanityFetch({ query: allPostsQuery });
-  console.log(data);
+  const allPosts = sanityDataToPosts(data);
 
   return (
     <ul className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
@@ -23,3 +19,12 @@ const Posts = async () => {
 };
 
 export default Posts;
+
+const sanityDataToPosts = (sanityData: AllPostsQueryResult): PostType[] =>
+  sanityData.map((item) => ({
+    title: item.title,
+    date: item.date,
+    id: item._id,
+    url: item.slug,
+    excerpt: item.excerpt || "",
+  }));
