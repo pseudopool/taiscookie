@@ -25,6 +25,13 @@ const sanityDataToPosts = (sanityData: AllPostsQueryResult): PostType[] =>
     title: item.title,
     date: item.date,
     id: item._id,
-    url: item.slug,
+    slug: item.slug,
     excerpt: item.excerpt || "",
+    image: formatImage(item.coverImage.asset?._ref || ""),
   }));
+
+const formatImage = (ref: string) => {
+  const [_, id, dimensions, format] = ref.split("-");
+  const cdnUrl = "https://cdn.sanity.io/images/cw69nwtn/production/";
+  return cdnUrl + id + "-" + dimensions + "." + format;
+};

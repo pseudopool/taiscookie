@@ -2,6 +2,7 @@ export type Post = {
   title: string;
   date: string;
   id: string;
-  url: string;
+  slug: string;
   excerpt: string;
+  image: string;
 };

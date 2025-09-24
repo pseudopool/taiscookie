@@ -42,10 +42,10 @@ const Post = ({ post, index }: Props) => {
   return (
     <li key={post.id} className="w-full">
       <article data-sanity={attr()}>
-        <Link href={`/posts/${post.url}`} className="w-full">
+        <Link href={`/posts/${post.slug}`} className="w-full">
           <Image
             className="w-full object-cover"
-            src={`/posts/${index}.jpeg`}
+            src={post.image}
             alt={post.title}
             width={200}
             height={200}
