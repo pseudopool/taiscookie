@@ -9,14 +9,16 @@
  * https://portabletext.org/
  *
  */
+import { useEffect } from "react";
 
 import {
   PortableText,
   type PortableTextComponents,
   type PortableTextBlock,
 } from "next-sanity";
+
 import ResolvedLink from "./ResolvedLink";
-import { useEffect } from "react";
+
 import "highlight.js/styles/tokyo-night-dark.css";
 import hljs from "highlight.js/lib/core";
 import javascript from "highlight.js/lib/languages/javascript";
