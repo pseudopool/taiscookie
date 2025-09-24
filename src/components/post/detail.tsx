@@ -1,6 +1,7 @@
 import { PostQueryResult } from "@/libs/sanity/sanity.types";
 import { type PortableTextBlock } from "next-sanity";
 import PortableText from "../sanity/PortableText";
+import dayjs from "dayjs";
 
 type Props = {
   post: PostQueryResult;
@@ -9,7 +10,7 @@ type Props = {
 const PostDetail = async ({ post }: Props) => {
   return (
     <>
-      <div className="break-keep mb-6 flex flex-col">
+      <div className="break-keep flex flex-col">
         <h1 className="p-2 border-b-2 border-black text-xl font-medium">
           {post?.title}
         </h1>
@@ -17,7 +18,7 @@ const PostDetail = async ({ post }: Props) => {
           {post?.excerpt}
         </h2>
         <span className="p-2 block text-sm font-azeret bg-highlight">
-          {post?.date}
+          {dayjs(post?.date).format("YYYY-MM-DD")}
         </span>
       </div>
       {post?.content?.length && (
