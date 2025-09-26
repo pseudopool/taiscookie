@@ -15,14 +15,13 @@ type Props = {
  * Generate the static params for the page.
  * Learn more: https://nextjs.org/docs/app/api-reference/functions/generate-static-params
  */
-export async function generateStaticParams(props: Props) {
-	const params = await props.params;
+export async function generateStaticParams() {
 	const { data } = await sanityFetch({
 		query: postPagesSlugs,
 		// Use the published perspective in generateStaticParams
 		perspective: "published",
 		stega: false,
-		tags: [`post:${params.slug}`, "author", "category"],
+		tags: ["post"],
 	});
 	return data;
 }
