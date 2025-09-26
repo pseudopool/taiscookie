@@ -5,7 +5,10 @@ import type { Post as PostType } from "@/types/post";
 import Post from "./post";
 
 const Posts = async () => {
-	const { data } = await sanityFetch({ query: allPostsQuery });
+	const { data } = await sanityFetch({
+		query: allPostsQuery,
+		tags: ["post", "author", "category"],
+	});
 	const allPosts = sanityDataToPosts(data);
 
 	return (
